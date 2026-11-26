@@ -40,9 +40,9 @@ CRITERIA = [
     ("Deel 2: zoekopdracht B bestaat uit trefwoorden (geen zin), met OR in hoofdletters tussen twee synoniemen.", 2),
     ("Deel 2: zoekopdracht C heeft een woordgroep tussen aanhalingstekens, een minteken vlak voor een woord, en de trefwoorden van B.", 3),
     ("Deel 2: vraag 2 zegt welk soort resultaat weg moest, en of het bij C weg was.", 2),
-    ("Deel 3: vraag 1 en 2: het filter en de periode, en zoekopdracht D (B of C, met het filter).", 2),
+    ("Deel 3: vraag 1 en 2: het filter en de periode, en zoekopdracht D (A, B of C, met het filter).", 2),
     ("Deel 3: vraag 3: twee resultaten, elk met titel en een volledig webadres, over slaap en schermen.", 4),
-    ("Deel 3: vraag 4 zegt waarom D beter werkt dan A, met iets wat je in de resultaten zag.", 2),
+    ("Deel 3: vraag 4 zegt of D beter werkt dan A, en waarom, met iets wat je in de resultaten zag.", 2),
     ("Deel 4: de exitvraag is een zoekopdracht met trefwoorden en OR in hoofdletters.", 1),
 ]
 
@@ -102,16 +102,19 @@ def werkdocument():
 
     # ---- Deel 3: filter en zoekverslag
     hs.deel(doc, 3, "Filter en zoekverslag", nieuwe_pagina=True)
-    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht (A,B of C) en kies twee bruikbare "
-                     "resultaten.")   # (A,B of C): Jonas, in het Google-document, 26-11-2026
+    # (A, B of C) in de opdracht en vraag 2: Jonas, 26-11-2026 ("Zet vraag 2 ook op A, B en C"); vraag 4 vraagt
+    # daarom óf D beter werkt dan A (D kan ook A met een filter zijn).
+    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht (A, B of C) en kies twee bruikbare "
+                     "resultaten.")
     hs.vraag(doc, "1.  Welk filter koos je, en welke periode? Kort mag.")
     hs.tabel(doc, ["Welk filter?", "Welke periode?"], [("", "")], [B / 2, B / 2], invul=(0, 1), rijhoogte=1.1)
-    hs.vraag(doc, "2.  Zoekopdracht D: je beste zoekopdracht (B of C), met het filter. Kopieer wat je typte.")
+    hs.vraag(doc, "2.  Zoekopdracht D: je beste zoekopdracht (A, B of C), met het filter. Kopieer wat je typte.")
     hs.antwoordvak(doc, 1.4)
     hs.vraag(doc, "3.  Kies twee resultaten die bruikbaar zijn voor het labo. Schrijf de titel en het webadres.")
     hs.tabel(doc, ["", "Titel", "Webadres"], [("Resultaat 1", "", ""), ("Resultaat 2", "", "")],
              [2.6, 6.6, B - 9.2], invul=(1, 2), rijhoogte=1.5)
-    hs.vraag(doc, "4.  Waarom vond je met D meer bruikbare resultaten dan met A? Gebruik iets wat je zag. Twee zinnen.")
+    hs.vraag(doc, "4.  Vond je met D meer bruikbare resultaten dan met A? Leg uit waarom (niet). Gebruik iets wat je "
+                   "zag. Twee zinnen.")
     hs.antwoordvak(doc, 2.4)
 
     # ---- Deel 4: klaar
@@ -165,7 +168,7 @@ ANTWOORDEN = [
     "Elke periode (de datum)",
     "Afgelopen jaar (elke periode is goed)",
     # Deel 3, vraag 2 (1 punt)
-    'slapen jongeren gsm OR smartphone "blauw licht" -kopen   (B of C; het filter zie je niet in wat je typt)',
+    'slapen jongeren gsm OR smartphone "blauw licht" -kopen   (A, B of C; het filter zie je niet in wat je typt)',
     # Deel 3, vraag 3 (4 punten: per resultaat titel 0,5, volledig webadres 1, over slaap én schermen 0,5)
     "de titel van een pagina over slaap en schermen (bv. van een krant, een gezondheidssite of een universiteit)",
     "https://… (het volledige adres uit de adresbalk; niet google.com/search?…, niet het AI-overzicht, geen advertentie)",
@@ -174,7 +177,8 @@ ANTWOORDEN = [
     # Deel 3, vraag 4 (2 punten)
     "A zocht op alle woorden van de zin, ook als, ze en hun, en gaf vooral forums en vragen van mensen (1). D zoekt op "
     "trefwoorden met een synoniem, sluit webshops uit en toont alleen pagina's van het afgelopen jaar: bij D gingen 4 "
-    "van de 5 over de vraag, bij A maar 1 (1: iets wat de leerling zelf zag)."
+    "van de 5 over de vraag, bij A maar 1 (1: iets wat de leerling zelf zag). Bouwde de leerling D op A, dan zegt het "
+    "antwoord of het filter hielp en waarom, met iets uit de eigen resultaten (ook 2)."
     + TELT_NIET + "'omdat het beter is', of een algemene zin over Google zonder iets uit de eigen resultaten.",
     # Deel 4: codewoord (−2 als het leeg of fout is; een tikfout telt als juist)
     "TREFWOORD",

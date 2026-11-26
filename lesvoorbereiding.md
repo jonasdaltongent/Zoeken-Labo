@@ -166,10 +166,10 @@ advertenties (*Gesponsord*). Je resultaten kunnen anders zijn dan die van je buu
 afgelopen jaar). Weer weg: **Wissen**. (Knopnamen: nalezen op het scherm, `_afspraken/klikpaden.md`.)
 
 - **Vraag 1** Welk filter koos je, en welke periode? (twee vakken, *kort mag*)
-- **Vraag 2** Je beste zoekopdracht (D): B of C, met het filter. Kopieer wat je typte. (vak)
+- **Vraag 2** Je beste zoekopdracht (D): A, B of C, met het filter (Jonas, 26-11-2026). Kopieer wat je typte. (vak)
 - **Vraag 3** Twee resultaten die je bruikbaar vindt voor het labo: de **titel** en het **webadres** (kopieer het adres uit de
   adresbalk). (twee rijen, vakken *Titel · Webadres*)
-- **Vraag 4** *Waarom vond je met D meer bruikbare resultaten dan met A? Gebruik iets wat je zag.* (*twee zinnen*) → verwacht:
+- **Vraag 4** *Vond je met D meer bruikbare resultaten dan met A? Leg uit waarom (niet). Gebruik iets wat je zag.* (*twee zinnen*) → verwacht:
   A zocht op alle woorden van de zin, ook de kleine, en gaf resultaten over iets anders / vragen op forums; D zoekt op de
   trefwoorden, met synoniemen, sluit ruis uit en toont alleen recente pagina's. Telt niet: *omdat het beter is* of een
   algemene zin over Google zonder iets uit hun resultaten.
@@ -232,9 +232,9 @@ Op **20 punten**, beoordeeld op het werkdocument. Dezelfde criteria staan als co
 | Deel 2: zoekopdracht B | alleen trefwoorden, geen zin (1); `OR` in hoofdletters tussen twee synoniemen (1) | 2 |
 | Deel 2: zoekopdracht C | een woordgroep van minstens twee woorden tussen aanhalingstekens (1); een minteken vlak voor een woord, zonder spatie (1); de trefwoorden van B staan er nog in (1) | 3 |
 | Deel 2: vraag 2 | welk soort resultaat van B weg moest (1), en of het bij C weg was (1) | 2 |
-| Deel 3: vraag 1 en 2 (filter en zoekopdracht D) | welk filter en welke periode (1); zoekopdracht D gekopieerd, B of C (1) | 2 |
+| Deel 3: vraag 1 en 2 (filter en zoekopdracht D) | welk filter en welke periode (1); zoekopdracht D gekopieerd, A, B of C (1) | 2 |
 | Deel 3: vraag 3 (twee resultaten) | per resultaat: titel (0,5), een volledig webadres (1), het gaat over slaap en schermen (0,5) | 4 |
-| Deel 3: vraag 4 | waarom D beter werkt dan A (1), met iets wat de leerling in de resultaten zag (1) | 2 |
+| Deel 3: vraag 4 | of D beter werkt dan A en waarom (1), met iets wat de leerling in de resultaten zag (1) | 2 |
 | Deel 4: exitvraag | een zoekopdracht met trefwoorden en `OR` in hoofdletters | 1 |
 
 **Aftrek** volgens `_afspraken/evaluatie-en-privacy.md`: niets ingeleverd = 0 (mag later), te laat = −5, codewoord

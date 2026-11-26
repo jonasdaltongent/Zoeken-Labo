@@ -157,9 +157,9 @@ Per criterium van § 22 van de lesvoorbereiding (samen 20):
 - **Deel 2, zoekopdracht C (3 punten):** een woordgroep van minstens twee woorden tussen aanhalingstekens (1); een minteken vlak voor een
   woord, zonder spatie (1); de trefwoorden van B staan er nog in (1).
 - **Deel 2, vraag 2 (2 punten):** welk soort resultaat van B weg moest (1), en of het bij C weg was (1).
-- **Deel 3, vraag 1 en 2 (2 punten):** welk filter en welke periode (1); zoekopdracht D gekopieerd, B of C (1).
+- **Deel 3, vraag 1 en 2 (2 punten):** welk filter en welke periode (1); zoekopdracht D gekopieerd, A, B of C (1).
 - **Deel 3, vraag 3 (4 punten):** per resultaat titel (0,5), volledig webadres met `https://` naar een gewone pagina (1), over slaap én schermen (0,5).
-- **Deel 3, vraag 4 (2 punten):** waarom D beter werkt dan A (1), met iets wat de leerling in de resultaten zag (1).
+- **Deel 3, vraag 4 (2 punten):** of D beter werkt dan A en waarom (1), met iets wat de leerling in de resultaten zag (1).
 - **Deel 4, exitvraag (1 punt):** een zoekopdracht met trefwoorden en `OR` in hoofdletters, bv. `stress examens jongeren OR tieners`.
 
 Wat niet telt: de aantallen zelf, welke synoniemen precies, welke woordgroep en welk uitgesloten woord, welke periode, spelling en hoofdletters buiten `OR`.
