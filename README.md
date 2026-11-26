@@ -68,7 +68,7 @@ Repository [`jonasdaltongent/Zoeken-Labo`](https://github.com/jonasdaltongent/Zo
 
 ### Stap 2 — De opdracht in Classroom, met de koppeling
 
-De opdracht staat als **concept** klaar in `3MWWE - Informatica`; inplannen doet de hoofdsessie na het nakijken.
+De opdracht staat als **concept** klaar in `3MWWE - Informatica` (id `25614259410`) en is sinds 26-11-2026 **ingepland voor donderdag 26 november 2026 om 14.05 uur** (een half uur vóór het 8ste lesuur van 14.35 uur). Classroom publiceert dan zelf.
 
 | | Opdracht: **Les 6 — Zoeken als een onderzoeker** |
 |---|---|
