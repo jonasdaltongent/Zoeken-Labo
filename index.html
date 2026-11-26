@@ -23,6 +23,7 @@
   <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10.5V6a1.5 1.5 0 0 1 3 0v7.5"/><path d="M8 11.5l-1.5-1.5a1.6 1.6 0 0 0-2.3 2.3l3.6 4.2A6.5 6.5 0 0 0 17 13.5"/></symbol>
   <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
   <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6h.01"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
 </svg>
 
@@ -122,7 +123,7 @@
 
           <h2 class="sec">Vast? Probeer het in deze volgorde</h2>
           <ol class="vast">
-            <li><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg><span>Het infokader in je werkdocument, of <em>Toon stapjes</em></span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg><span>Het blauwe kader in de stap, of <em>Toon stapjes</em></span></li>
             <li><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Je buur</span></li>
             <li><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg><span>Je leraar</span></li>
           </ol>
@@ -142,15 +143,16 @@
           <div class="todo-box">
             <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
             <ol class="doe">
-<li><details class="stapjes"><summary><span class="doe-tekst">Open Google in een nieuw tabblad.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
-<ol class="klein">
-<li><p>Klik rechts van je tabbladen op het plusje.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome: Google Classroom, Lespagina Les 6 en Zoekverslag-onderzoekslabo. Het plusje rechts ervan staat in een rood kader."><span class="tt-tab"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 6</span><span class="tt-tab actief"><img class="logo" src="assets/logos/docs.svg" alt="">Zoekverslag-onderzoekslabo</span><span class="tt-tab wijs" style="flex:0 0 auto">+</span></div></li>
-<li><p>Typ <strong>google.com</strong> en druk op <strong>Enter</strong>.</p></li>
-</ol>
-</details></li>
-<li><span class="doe-tekst">Typ je antwoord in het lichtblauwe vak.</span><span class="sub">Typ in het vak, niet ernaast.</span></li>
-<li><span class="doe-tekst">Maak deel 1 in je werkdocument.</span></li>
+<li><span class="doe-tekst">Maak deel 1 in je werkdocument.</span><span class="naar-kader"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Gebruik de informatie uit het blauwe kader hieronder.</span></li>
+<li><span class="doe-tekst">Kies nog twee trefwoorden uit de vraag.</span></li>
+<li><span class="doe-tekst">Zoek bij elk trefwoord een synoniem.</span></li>
+<li><span class="doe-tekst">Typ ze in de lichtblauwe vakken.</span><span class="sub">Eén woord per vak. Typ in het vak, niet ernaast.</span></li>
+<li><span class="doe-tekst">Beantwoord vraag 2 in één zin.</span></li>
             </ol>
+          </div>
+          <div class="info" role="group" aria-labelledby="info-1">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-1">Van vraag naar trefwoorden</h3><span class="info-bij">bij deel 1</span></div>
+            <div class="info-body"><ul><li><strong>Zoekmachine:</strong> zoekt op woorden. Typ dus geen hele vraag.</li><li><strong>Trefwoord:</strong> een belangrijk woord uit de vraag. Het zegt waarover je zoekt.</li><li><strong>Synoniem:</strong> een ander woord met dezelfde betekenis. Een Engels woord mag ook.</li><li><strong>Kleine woorden</strong> (als, ze, op, hun) laat je weg.</li></ul></div>
           </div>
           <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat er een zin in je vak?</strong> Hou één woord over.</p></div>
         </div>
@@ -168,6 +170,13 @@
           <div class="todo-box">
             <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
             <ol class="doe">
+<li><span class="doe-tekst">Maak deel 2 in je werkdocument.</span><span class="naar-kader"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Gebruik de informatie uit het blauwe kader hieronder.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Open Google in een nieuw tabblad.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik rechts van je tabbladen op het plusje.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome: Google Classroom, Lespagina Les 6 en Zoekverslag-onderzoekslabo. Het plusje rechts ervan staat in een rood kader."><span class="tt-tab"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 6</span><span class="tt-tab actief"><img class="logo" src="assets/logos/docs.svg" alt="">Zoekverslag-onderzoekslabo</span><span class="tt-tab wijs" style="flex:0 0 auto">+</span></div></li>
+<li><p>Typ <strong>google.com</strong> en druk op <strong>Enter</strong>.</p></li>
+</ol>
+</details></li>
 <li><details class="stapjes"><summary><span class="doe-tekst">Zoek drie keer: A, B en C.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
 <ol class="klein">
 <li><p><strong>A</strong> · Kopieer de vraag van Ines uit je werkdocument. Plak ze in het zoekvak en druk op <strong>Enter</strong>.</p><div class="gzoek" role="img" aria-label="Tekening van het zoekvak van Google met de hele vraag: Slapen jongeren slechter als ze 's avonds op hun gsm zitten? Het zoekvak staat in een rood kader."><div class="gz-vak wijs">Slapen jongeren slechter als ze 's avonds op hun gsm zitten?</div></div><span class="sub">Tel de resultaten. Schrijf het getal bij A.</span></li>
@@ -182,8 +191,12 @@
 <li><p>Schrijf in deel 2 wat je typte en het getal (0 tot 5).</p><div class="zv-tabel" role="img" aria-label="Tekening van de tabel van deel 2, ingevuld als voorbeeld. Rij A: de hele vraag, 1. Rij B: slapen jongeren gsm OR smartphone, 3. Rij C: slapen jongeren gsm OR smartphone, blauw licht tussen aanhalingstekens, -kopen, 4."><div class="zv-rij"><span></span><span>Wat typte je?</span><span>0–5</span></div><div class="zv-rij"><span>A</span><span class="grijs">Slapen jongeren slechter als ze 's avonds op hun gsm zitten?</span><span class="vak">1</span></div><div class="zv-rij"><span>B</span><span class="vak">slapen jongeren gsm OR smartphone</span><span class="vak">3</span></div><div class="zv-rij"><span>C</span><span class="vak">slapen jongeren gsm OR smartphone "blauw licht" -kopen</span><span class="vak">4</span></div></div><span class="sub">Een voorbeeld: jouw getallen mogen anders zijn.</span></li>
 </ol>
 </details><span class="sub">Je buur telt misschien andere resultaten: dat is normaal.</span></li>
-<li><span class="doe-tekst">Maak deel 2 in je werkdocument.</span></li>
+<li><span class="doe-tekst">Beantwoord vraag 2 over je minteken.</span></li>
             </ol>
+          </div>
+          <div class="info" role="group" aria-labelledby="info-2">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-2">Zo typ je het in Google</h3><span class="info-bij">bij deel 2</span></div>
+            <div class="info-body"><ul><li><strong>Alle woorden erin:</strong> een spatie tussen de woorden: <code>slaap jongeren</code></li><li><strong>Een van twee woorden:</strong> OR in hoofdletters ertussen: <code>gsm OR smartphone</code></li><li><strong>Een woord niet:</strong> een minteken vlak voor het woord, zonder spatie: <code>-app</code></li><li><strong>Precies deze woorden:</strong> tussen aanhalingstekens: <code>"blauw licht"</code></li></ul></div>
           </div>
           <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat er bovenaan een AI-overzicht?</strong> Tel het niet mee.</p></div>
         </div>
@@ -201,6 +214,7 @@
           <div class="todo-box">
             <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
             <ol class="doe">
+<li><span class="doe-tekst">Maak deel 3 in je werkdocument.</span><span class="naar-kader"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Gebruik de informatie uit het blauwe kader hieronder.</span></li>
 <li><details class="stapjes"><summary><span class="doe-tekst">Kies een filter onder <span class="ui">Tools</span>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
 <ol class="klein">
 <li><p>Zoek je beste zoekopdracht. Klik onder het zoekvak op <span class="ui">Tools</span>.</p><div class="gzoek" role="img" aria-label="Tekening van het zoekvak van Google met daaronder de tabs Alle, Afbeeldingen, Video's, Nieuws en Tools. Tools staat in een rood kader."><div class="gz-vak">slaap jongeren gsm OR smartphone</div><div class="gz-tabs"><span class="aan">Alle</span><span>Afbeeldingen</span><span>Video's</span><span>Nieuws</span><span class="wijs">Tools</span></div></div></li>
@@ -208,8 +222,20 @@
 <li><p>Kies <span class="ui">Afgelopen jaar</span>.</p><div class="gzoek" role="img" aria-label="Tekening van de lijst met periodes: Elke periode, Afgelopen uur, Afgelopen 24 uur, Afgelopen week, Afgelopen maand, Afgelopen jaar in een rood kader, en Aangepaste periode."><div class="gz-lijst"><div>Elke periode</div><div>Afgelopen uur</div><div>Afgelopen 24 uur</div><div>Afgelopen week</div><div>Afgelopen maand</div><div class="wijs">Afgelopen jaar</div><div>Aangepaste periode…</div></div></div></li>
 </ol>
 </details><span class="sub">Weer weg: klik onder <span class="ui">Tools</span> op <span class="ui">Wissen</span>.</span></li>
-<li><span class="doe-tekst">Maak deel 3 in je werkdocument.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Kopieer het webadres van twee resultaten.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik op een bruikbaar resultaat.</p></li>
+<li><p>Klik bovenaan in de adresbalk. Het hele adres wordt blauw.</p><div class="adresbalk" role="img" aria-label="Tekening van de adresbalk van Chrome met het webadres van een pagina, blauw geselecteerd, in een rood kader."><span class="ab-pijlen">&larr; &rarr; &#8635;</span><span class="ab-vak wijs"><span class="ab-adres">www.voorbeeld.be/slaap-en-schermen</span></span></div></li>
+<li><p>Druk op <strong>Ctrl</strong> + <strong>C</strong>.</p></li>
+<li><p>Klik in deel 3 in het vak onder <em>Webadres</em>. Druk op <strong>Ctrl</strong> + <strong>V</strong>.</p></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst">Leg uit waarom D beter werkt dan A.</span></li>
             </ol>
+          </div>
+          <div class="info" role="group" aria-labelledby="info-3">
+            <div class="info-kop"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span class="info-soort">Info</span><h3 id="info-3">Een filter en een bruikbaar resultaat</h3><span class="info-bij">bij deel 3</span></div>
+            <div class="info-body"><ul><li><strong>Filter:</strong> een keuze onder het zoekvak die maar een deel van de resultaten toont, bv. alleen het afgelopen jaar.</li><li><strong>Bruikbaar:</strong> het resultaat gaat over slaap én schermen.</li><li><strong>Webadres:</strong> het adres van de pagina zelf, bovenaan in de adresbalk.</li></ul></div>
           </div>
           <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Begint je webadres met google.com?</strong> Klik eerst op het resultaat. Kopieer dan het adres.</p></div>
         </div>
@@ -231,7 +257,7 @@
         <div class="card-body">
           <p class="intro">Beantwoord eerst de drie vragen: zijn ze allemaal juist, dan zie je hoe je inlevert.</p>
           <div class="quiz">
-            <div class="quiz-q" data-ok="Juist. OR zegt: het ene woord, het andere woord, of allebei. Zo vind je meer." data-nok="Nog niet. Kijk in deel 2 in het infokader: wat doet OR?">
+            <div class="quiz-q" data-ok="Juist. OR zegt: het ene woord, het andere woord, of allebei. Zo vind je meer." data-nok="Nog niet. Kijk in stap 2 in het blauwe kader: wat doet OR?">
               <p>1. Waarom zet je OR tussen gsm en smartphone?</p>
               <div class="opts">
                 <button type="button" data-right>Zo vind je pagina's met het ene of het andere woord</button>
@@ -240,7 +266,7 @@
               </div>
               <p class="feedback" role="status"></p>
             </div>
-            <div class="quiz-q" data-ok="Juist. Het minteken staat vlak voor het woord, zonder spatie." data-nok="Nog niet. Kijk in deel 2 in het infokader: waar staat het minteken?">
+            <div class="quiz-q" data-ok="Juist. Het minteken staat vlak voor het woord, zonder spatie." data-nok="Nog niet. Kijk in stap 2 in het blauwe kader: waar staat het minteken?">
               <p>2. Welke zoekopdracht sluit pagina's over baby's uit?</p>
               <div class="opts">
                 <button type="button">slaap jongeren - baby</button>
@@ -249,7 +275,7 @@
               </div>
               <p class="feedback" role="status"></p>
             </div>
-            <div class="quiz-q" data-ok="Juist. Het AI-overzicht en de advertenties tel je niet mee." data-nok="Nog niet. Kijk in deel 2 in het infokader: wat tel je?">
+            <div class="quiz-q" data-ok="Juist. Het AI-overzicht en de advertenties tel je niet mee." data-nok="Nog niet. Kijk in stap 2 naar de tip: wat tel je niet mee?">
               <p>3. Je telt de eerste 5 resultaten. Wat tel je niet mee?</p>
               <div class="opts">
                 <button type="button">Een resultaat van een krant</button>

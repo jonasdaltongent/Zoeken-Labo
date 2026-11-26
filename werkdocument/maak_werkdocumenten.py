@@ -48,8 +48,10 @@ CRITERIA = [
 
 
 def werkdocument():
-    """In de huisstijl van 19-11-2026 (huisstijl.py): per deel de opdracht, het infokader en de vragen met cijfers.
-    Waar de leerling klikt (Tools, het filter), staat op de lespagina."""
+    """In de huisstijl van 19-11-2026 (huisstijl.py): per deel de opdracht en de vragen met cijfers. De uitleg
+    (de vroegere infokaders) staat sinds 26-11-2026 op de lespagina, in het blauwe kader van de stap (Jonas: "Ik zou ook
+    wel graag de theoretische informatie toch terug in de lespagina willen verwerken, in plaats van in het
+    werkdocument"). Waar de leerling klikt (Tools, het filter, de adresbalk), staat er ook."""
     doc = hs.nieuw_document()
     doc.core_properties.title = "Zoekverslag onderzoekslabo - werkdocument"
     doc.core_properties.author = "Toegepaste Informatica"
@@ -64,14 +66,7 @@ def werkdocument():
     # ---- Deel 1: van vraag naar trefwoorden
     hs.deel(doc, 1, "Van vraag naar trefwoorden")
     hs.opdracht(doc, "De vraag van Ines is te lang voor Google. Kies er de trefwoorden uit en zoek bij elk een synoniem. "
-                     "In deel 2 typ je die woorden in Google. Gebruik het infokader. De eerste rij is een voorbeeld: "
-                     "je mag het overnemen.")
-    hs.infokader(doc, "Van vraag naar trefwoorden", [
-        ("Zoekmachine:", "zoekt op woorden. Typ dus geen hele vraag."),
-        ("Trefwoord:", "een belangrijk woord uit de vraag. Het zegt waarover je zoekt."),
-        ("Synoniem:", "een ander woord met dezelfde betekenis. Een Engels woord mag ook."),
-        ("Kleine woorden", "(als, ze, op, hun) laat je weg."),
-    ])
+                     "In deel 2 typ je die woorden in Google. De eerste rij is een voorbeeld: je mag het overnemen.")
     hs.vraag(doc, "1.  Kies nog twee trefwoorden uit de vraag van Ines. Schrijf bij elk een synoniem. Eén woord per vak.")
     hs.tabel(doc, ["Trefwoord uit de vraag", "Synoniem"], [
         ("gsm", "smartphone"),
@@ -85,15 +80,7 @@ def werkdocument():
     hs.deel(doc, 2, "Drie keer zoeken", nieuwe_pagina=True)   # elk deel op een eigen blad (Jonas, 26-11-2026)
     hs.opdracht(doc, "Zoek drie keer in Google. A is de vraag van Ines. Bij B typ je geen zin meer: alleen je drie "
                      "trefwoorden uit deel 1, met OR. Bij C bouw je verder op B. Tel telkens hoeveel van de eerste 5 "
-                     "resultaten gaan over slaap én schermen én jongeren. Gebruik het infokader.")
-    hs.infokader(doc, "Zo typ je het in Google", [
-        ("Alle woorden erin:", "een spatie tussen de woorden:  slaap jongeren"),
-        ("Een van twee woorden:", "OR in hoofdletters ertussen:  gsm OR smartphone"),
-        ("Een woord niet:", "een minteken vlak voor het woord, zonder spatie:  -app"),
-        ("Precies deze woorden:", "tussen aanhalingstekens:  \"blauw licht\""),
-        ("Tellen:", "alleen de gewone resultaten, niet het AI-overzicht en niet de advertenties (Gesponsord). "
-                    "Je buur telt misschien andere resultaten: dat is normaal."),
-    ])
+                     "resultaten gaan over slaap én schermen én jongeren.")
     hs.vraag(doc, "1.  Vul de tabel in: wat typte je, en hoeveel van de eerste 5 resultaten gaan over de vraag (0 tot 5)?")
     hs.tabel(doc, ["Zoekopdracht", "Wat typte je?", "0–5"], [
         ("A  De vraag van Ines, als zin", ZOEKOPDRACHT_A, ""),
@@ -105,14 +92,7 @@ def werkdocument():
 
     # ---- Deel 3: filter en zoekverslag
     hs.deel(doc, 3, "Filter en zoekverslag", nieuwe_pagina=True)
-    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht en kies twee bruikbare resultaten. Gebruik het infokader.")
-    hs.infokader(doc, "Een filter", [
-        ("Filter:", "een keuze onder het zoekvak die maar een deel van de resultaten toont, bv. alleen het afgelopen jaar."),
-        ("Weer weg:", "Wissen."),
-        ("Webadres:", "klik op het resultaat. Het adres staat bovenaan in de adresbalk: kopieer het met Ctrl + C. "
-                      "Een adres dat met google.com begint, is geen goed adres."),
-        ("Bruikbaar:", "het gaat over slaap én schermen."),
-    ])
+    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht en kies twee bruikbare resultaten.")
     hs.vraag(doc, "1.  Welk filter koos je, en welke periode? Kort mag.")
     hs.tabel(doc, ["Welk filter?", "Welke periode?"], [("", "")], [B / 2, B / 2], invul=(0, 1), rijhoogte=1.1)
     hs.vraag(doc, "2.  Zoekopdracht D: je beste zoekopdracht (B of C), met het filter. Kopieer wat je typte.")

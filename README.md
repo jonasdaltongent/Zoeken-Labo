@@ -51,12 +51,15 @@ handeling (het filter onder **Tools**), de uitleg in het werkdocument, zes dia's
 - **Stap 2, *Toon stapjes*** (bijgestuurd op 26-11-2026, Jonas): *Zoek drie keer: A, B en C* heeft een stapje per zoekopdracht met een
   tekening van het zoekvak en wat elk stuk betekent; bij B twee keer *Niet* (de zin met OR erbij, alleen `gsm OR smartphone`).
   *Tel na elke zoekopdracht de resultaten* toont de tabel van deel 2 ingevuld als voorbeeld.
-- **Vier stappen**: 1 *Van vraag naar trefwoorden* (Google openen in een nieuw tabblad, typen in het lichtblauwe vak), 2 *Drie keer
-  zoeken* (een zoekopdracht typen, de gewone resultaten tellen), 3 *Filter en zoekverslag* (**Tools** › **Elke periode** › **Afgelopen
-  jaar**), 4 *Inleveren*. Elke stap eindigt met *Maak deel n in je werkdocument.* Vette regels van hoogstens 8 woorden. Alle beelden zijn
-  tekeningen in HTML en CSS (het zoekvak van Google, de tabs met **Tools**, het menu, de resultaten met wat meetelt en wat niet).
-- **Geen theoriekaart en geen infokader op de pagina**: de uitleg staat in het werkdocument (*Van vraag naar trefwoorden*, *Zo typ je het
-  in Google*, *Een filter*).
+- **Vier stappen**: 1 *Van vraag naar trefwoorden* (trefwoorden en synoniemen kiezen, typen in het lichtblauwe vak), 2 *Drie keer
+  zoeken* (Google openen in een nieuw tabblad, A, B en C zoeken, de gewone resultaten tellen), 3 *Filter en zoekverslag* (**Tools** ›
+  **Elke periode** › **Afgelopen jaar**, een webadres kopiëren uit de adresbalk), 4 *Inleveren*. Sinds 26-11-2026 (Jonas) **begint**
+  elke stap met *Maak deel n in je werkdocument.* en daaronder *Gebruik de informatie uit het blauwe kader hieronder*; de handelingen
+  erna zeggen wat de leerling in dat deel doet. Vette regels van hoogstens 8 woorden. Alle beelden zijn tekeningen in HTML en CSS (het
+  zoekvak van Google, de tabs met **Tools**, het menu, de resultaten met wat meetelt en wat niet, de adresbalk).
+- **De uitleg staat op de pagina**, in een blauw kader onderaan stap 1, 2 en 3 (*Van vraag naar trefwoorden*, *Zo typ je het in
+  Google*, *Een filter en een bruikbaar resultaat*), niet meer in het werkdocument (Jonas, 26-11-2026: "Ik zou ook wel graag de
+  theoretische informatie toch terug in de lespagina willen verwerken"). Geen theoriekaart.
 - **Stap 4 (*Inleveren*)**: *Wat moet je doen?* is vergrendeld achter drie meerkeuzevragen (OR, het minteken, het AI-overzicht niet
   tellen). Zijn ze alle drie juist, dan toont de groene balk het codewoord **TREFWOORD** (dat de leerling bovenaan deel 4 typt).
 - **Checklist**: 7 taken. **Geen AI-hulp** (`data-ai-hulp="uit"`).

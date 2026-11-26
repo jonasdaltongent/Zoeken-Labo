@@ -98,7 +98,8 @@ werkdocument *Zoekverslag-onderzoekslabo* (**Een kopie maken voor elke leerling*
 ## 14. Het individuele werkdocument
 
 *Zoekverslag-onderzoekslabo* (docx uit `werkdocument/maak_werkdocumenten.py`, huisstijl). Bovenaan de **opdracht** van
-Ines (kort, met de onderzoeksvraag). Elk deel: opdracht, infokader, vakken. De uitleg staat hier, niet op de lespagina.
+Ines (kort, met de onderzoeksvraag). Elk deel: opdracht en vakken. De uitleg (hieronder nog *Infokader* genoemd) staat sinds 26-11-2026 op de lespagina, in een blauw
+kader onderaan de stap (Jonas); de opdracht zegt niet meer *Gebruik het infokader*.
 
 ### Deel 1 — Van vraag naar trefwoorden (3 punten)
 

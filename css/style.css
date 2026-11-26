@@ -678,3 +678,13 @@ body.js .slot { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.2r
 .zv-tabel .zv-rij span:first-child { font-weight: 700; }
 .zv-tabel .vak { background: #F3F5FC; border-left: 1px solid #D5DAEE; }
 .zv-tabel .grijs { color: #5F6368; font-style: italic; border-left: 1px solid #D5DAEE; }
+
+/* ---- Les 6 (26-11-2026): de uitleg in een blauw kader onderaan de stap, met een verwijzing in de eerste handeling
+   (Jonas: "Maak deel x in het werkdocument. Gebruik de informatie uit het kader") ---- */
+.naar-kader { display: flex; align-items: center; gap: .4rem; margin-top: .3rem; color: var(--navy); font-weight: 700; font-size: .95rem; }
+.naar-kader .ic { width: 1.1rem; height: 1.1rem; flex: 0 0 auto; }
+.info-body code { font-family: var(--mono); font-weight: 700; color: var(--navy-deep); background: #fff; border: 1px solid var(--peri); border-radius: 6px; padding: 0 .35rem; white-space: nowrap; }
+.adresbalk { display: flex; align-items: center; gap: .6rem; max-width: 30rem; margin-top: .5rem; padding: .45rem .6rem; background: #F1F3F4; border-radius: 10px; font-size: .9rem; }
+.ab-pijlen { color: var(--muted); letter-spacing: .25rem; white-space: nowrap; }
+.ab-vak { flex: 1; background: #fff; border-radius: 999px; padding: .25rem .7rem; overflow: hidden; }
+.ab-adres { background: #C9DCF8; padding: 0 .1rem; white-space: nowrap; }
