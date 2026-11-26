@@ -13,7 +13,9 @@ Geen zip en geen losse bestanden: alles wat de leerling maakt, typt hij IN dit w
 
 LET OP bij aanpassen:
  - Alle namen zijn verzonnen (het labo en Ines Coppens zijn fictief).
- - Het voorbeeld (rij schermen · gsm · smartphone en zoekopdracht A) staat al ingevuld, in het grijs. Laat het ingevuld.
+ - Het voorbeeld (rij gsm · smartphone en zoekopdracht A) staat al ingevuld, in het grijs. Laat het ingevuld.
+ - Deel 1 heeft geen kolom *Idee* meer (Jonas, 26-11-2026: het idee was al het trefwoord): de leerling kiest zelf
+   twee trefwoorden uit de vraag, naast gsm, en zoekt bij elk een synoniem.
  - Elk antwoord staat in een eigen vak, en elk vak hoort bij één criterium van lesvoorbereiding § 22
    (_afspraken/verbeteren.md, *Een les die je kan verbeteren*). Wijzig je de vakken, wijzig dan § 14 en § 22.
  - De punten in deel 4 (2 · 1 · 1 · 2 · 3 · 2 · 2 · 4 · 2 · 1 = 20) komen overeen met lesvoorbereiding § 22.
@@ -32,7 +34,7 @@ ZOEKOPDRACHT_A = VRAAG
 
 # De criteria van lesvoorbereiding § 22 (samen 20): 2 · 1 · 1 · 2 · 3 · 2 · 2 · 4 · 2 · 1
 CRITERIA = [
-    ("Deel 1: de tabel heeft bij slaap en bij jongeren een trefwoord en een synoniem (één woord per vak).", 2),
+    ("Deel 1: twee trefwoorden uit de vraag (naast gsm), elk met een synoniem (één woord per vak).", 2),
     ("Deel 1: vraag 2 zegt dat je met twee woorden ook pagina's vindt die het andere woord gebruiken.", 1),
     ("Deel 2: bij A, B en C staat een getal van 0 tot 5.", 1),
     ("Deel 2: zoekopdracht B bestaat uit trefwoorden (geen zin), met OR in hoofdletters tussen twee synoniemen.", 2),
@@ -61,20 +63,21 @@ def werkdocument():
 
     # ---- Deel 1: van vraag naar trefwoorden
     hs.deel(doc, 1, "Van vraag naar trefwoorden")
-    hs.opdracht(doc, "Haal uit de onderzoeksvraag drie ideeën. Kies bij elk idee een trefwoord en een synoniem. "
-                     "Gebruik het infokader. De eerste rij is een voorbeeld: je mag het overnemen.")
+    hs.opdracht(doc, "De vraag van Ines is te lang voor Google. Kies er de trefwoorden uit en zoek bij elk een synoniem. "
+                     "In deel 2 typ je die woorden in Google. Gebruik het infokader. De eerste rij is een voorbeeld: "
+                     "je mag het overnemen.")
     hs.infokader(doc, "Van vraag naar trefwoorden", [
         ("Zoekmachine:", "zoekt op woorden. Typ dus geen hele vraag."),
-        ("Idee:", "een belangrijk ding uit de vraag. Kies per idee één trefwoord."),
+        ("Trefwoord:", "een belangrijk woord uit de vraag. Het zegt waarover je zoekt."),
         ("Synoniem:", "een ander woord met dezelfde betekenis. Een Engels woord mag ook."),
         ("Kleine woorden", "(als, ze, op, hun) laat je weg."),
     ])
-    hs.vraag(doc, "1.  Vul de tabel in. Eén woord per vak.")
-    hs.tabel(doc, ["Idee", "Trefwoord", "Synoniem"], [
-        ("schermen", "gsm", "smartphone"),
-        ("slaap", "", ""),
-        ("jongeren", "", ""),
-    ], [3.6, 6.7, B - 10.3], invul=(1, 2), voorbeeld_rij=1)
+    hs.vraag(doc, "1.  Kies nog twee trefwoorden uit de vraag van Ines. Schrijf bij elk een synoniem. Eén woord per vak.")
+    hs.tabel(doc, ["Trefwoord uit de vraag", "Synoniem"], [
+        ("gsm", "smartphone"),
+        ("", ""),
+        ("", ""),
+    ], [B / 2, B / 2], invul=(0, 1), voorbeeld_rij=1)
     hs.vraag(doc, "2.  Waarom zoek je met gsm én smartphone? Eén zin, kort mag.")
     hs.antwoordvak(doc, 1.6)
 
@@ -93,7 +96,7 @@ def werkdocument():
     hs.vraag(doc, "1.  Vul de tabel in: wat typte je, en hoeveel van de eerste 5 resultaten gaan over de vraag (0 tot 5)?")
     hs.tabel(doc, ["Zoekopdracht", "Wat typte je?", "0–5"], [
         ("A  De vraag als zin", ZOEKOPDRACHT_A, ""),
-        ("B  Trefwoorden uit deel 1, met OR", "", ""),
+        ("B  Je drie trefwoorden uit deel 1, met OR tussen een trefwoord en zijn synoniem", "", ""),
         ("C  B, plus een woordgroep tussen aanhalingstekens, plus een woord met een minteken", "", ""),
     ], [4.6, B - 4.6 - 1.8, 1.8], invul=(1, 2), voorbeeld_rij=1, rijhoogte=1.5)
     hs.vraag(doc, "2.  Welk soort resultaat van B wilde je kwijt met je minteken? Was het bij C weg? Twee korte zinnen.")

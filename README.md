@@ -123,7 +123,7 @@ Google). Waar jouw scherm anders zegt, geldt jouw scherm.
 - **Dia 1 (0–1'):** *Zo start je.* Wacht tot de meesten de lespagina open hebben.
 - **Dia 2 (1–3'):** *Weet je het nog?* Vingervraag over les 5 (phishing) → **1**. Brug: de groepschat ging over het onderzoek naar slaap.
 - **Dia 3 (3–4'):** het bericht van Ines met de onderzoeksvraag en het zoekverslag als skelet.
-- **Dia 4 (4–9'):** demo in Google: de vraag als zin, tel de eerste 5; vul samen de rij *schermen · gsm · smartphone* in; typ
+- **Dia 4 (4–9'):** demo in Google: de vraag als zin, tel de eerste 5; vul samen de eerste rij *gsm · smartphone* in (de andere twee trefwoorden kiezen ze zelf); typ
   `slaap jongeren gsm OR smartphone`, tel opnieuw; toon `-app`. **Niet** voorgedaan: aanhalingstekens en het filter.
 - **Dia 5 (9–10'):** *Controle · iedereen antwoordt.* `slaap gsm -app` → **2**.
 - **Dia 6 (10'):** *Zo werk je verder.* Stap 1 (Google openen in een nieuw tabblad, 3') doen ze nu samen: duim omhoog.
@@ -140,9 +140,11 @@ Google). Waar jouw scherm anders zegt, geldt jouw scherm.
 Per criterium van § 22 van de lesvoorbereiding (samen 20):
 
 - **Codewoord** bovenaan deel 4: **TREFWOORD** (ontbreekt of fout = −2; een tikfout zoals *TREFWORD* telt als juist).
-- **Deel 1, tabel (2 punten):** bij *slaap* en bij *jongeren* een trefwoord en een synoniem, elk vak één woord, 0,5 per vak. Verwacht:
-  slaap → *slaap, slapen, nachtrust, slaaptekort, slaapkwaliteit*; jongeren → *jongeren, tieners, adolescenten, pubers*; Engels mag.
-  Niet: een zin, twee keer hetzelfde woord, een woord met een andere betekenis (*bed*, *kinderen*, *dromen*).
+- **Deel 1, tabel (2 punten):** twee trefwoorden uit de vraag naast *gsm* (0,5 per trefwoord), elk met een synoniem (0,5 per
+  synoniem), elk vak één woord. Verwacht: *slapen/slaap* → *nachtrust, slaaptekort, slaapkwaliteit, sleep*; *jongeren* → *tieners,
+  adolescenten, pubers, teenagers*; ook *'s avonds* als trefwoord. Niet: een klein woord, *slechter* of *zitten* als trefwoord, *gsm*
+  nog eens, een zin, hetzelfde woord als synoniem, een woord met een andere betekenis (*bed*, *kinderen*, *dromen*). Sinds
+  26-11-2026 zonder kolom *Idee* (Jonas: het idee was al het trefwoord).
 - **Deel 1, vraag 2 (1 punt):** met twee woorden vind je ook pagina's die het andere woord gebruiken. Niet: *omdat het hetzelfde is*.
 - **Deel 2, de aantallen (1 punt):** bij A, B en C een getal van 0 tot 5 (één ontbreekt 0,5; twee of meer 0). De getallen zelf tellen niet.
 - **Deel 2, zoekopdracht B (2 punten):** alleen trefwoorden, geen zin (1); `OR` in hoofdletters tussen twee synoniemen (1).

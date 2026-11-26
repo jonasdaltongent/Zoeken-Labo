@@ -63,7 +63,7 @@ hun gsm zitten?**
 
 | Lesdoel | Bloom | Kennis |
 |---|---|---|
-| De leerling zet een onderzoeksvraag om in trefwoorden met een synoniem per idee. | toepassen | procedureel |
+| De leerling kiest de trefwoorden uit een onderzoeksvraag en zoekt bij elk een synoniem. | toepassen | procedureel |
 | De leerling bouwt een zoekopdracht in Google met `OR`, een minteken en aanhalingstekens, en voegt een filter toe. | toepassen | procedureel |
 | De leerling vergelijkt drie zoekopdrachten op hoeveel resultaten over de vraag gaan en legt uit waarom de beste beter werkt. | analyseren | conceptueel |
 
@@ -102,22 +102,31 @@ Ines (kort, met de onderzoeksvraag). Elk deel: opdracht, infokader, vakken. De u
 
 ### Deel 1 — Van vraag naar trefwoorden (3 punten)
 
-**Infokader** *Van vraag naar trefwoorden*: een zoekmachine zoekt op woorden; typ dus geen hele vraag. Haal de ideeën uit
-de vraag, kies per idee één trefwoord en zoek er een synoniem bij. Kleine woorden (*als*, *ze*, *op*, *hun*) laat je weg.
+**Bijgestuurd op 26-11-2026** (Jonas: "Het idee is al bijna het trefwoord dat ze moeten gebruiken. En wat moeten ze doen
+met dat trefwoord?"): de kolom *Idee* is weg. De leerling kiest zelf de trefwoorden uit de vraag, en de opdracht zegt
+dat ze die in deel 2 in Google typen (zoekopdracht B).
 
-**Vraag 1**, tabel *Idee · Trefwoord · Synoniem*:
+**Opdracht:** de vraag van Ines is te lang voor Google; kies er de trefwoorden uit en zoek bij elk een synoniem; in deel 2
+typ je die woorden in Google. **Infokader** *Van vraag naar trefwoorden*: een zoekmachine zoekt op woorden, typ dus geen
+hele vraag; een trefwoord is een belangrijk woord uit de vraag, het zegt waarover je zoekt; een synoniem is een ander
+woord met dezelfde betekenis (Engels mag); kleine woorden (*als*, *ze*, *op*, *hun*) laat je weg.
 
-| Idee | Trefwoord | Synoniem |
-|---|---|---|
-| schermen | gsm | smartphone (*ingevuld: het voorbeeld uit de demo, mag je overnemen*) |
-| slaap | vak | vak |
-| jongeren | vak | vak |
+**Vraag 1** (*Kies nog twee trefwoorden uit de vraag van Ines. Schrijf bij elk een synoniem.*), tabel *Trefwoord uit de
+vraag · Synoniem*:
 
-- **Verwacht:** slaap → *slaap*, *slapen*, *nachtrust*, *slaaptekort*, *slaapkwaliteit*; jongeren → *jongeren*, *tieners*,
-  *adolescenten*, *pubers*. Een Engels woord (*sleep*, *teenagers*) mag ook.
-- **Telt niet:** een hele zin of een woordgroep met kleine woorden (*het slapen van jongeren*); twee keer hetzelfde woord
-  (trefwoord *slaap*, synoniem *slapen* telt wel: een andere vorm vindt andere pagina's); een woord met een andere
-  betekenis (*bed*, *kinderen*: kinderen zijn geen jongeren, *dromen*).
+| Trefwoord uit de vraag | Synoniem |
+|---|---|
+| gsm | smartphone (*ingevuld: het voorbeeld uit de demo, mag je overnemen*) |
+| vak | vak |
+| vak | vak |
+
+- **Verwacht:** *slapen* (of *slaap*) → *nachtrust*, *slaaptekort*, *slaapkwaliteit*, *sleep*; *jongeren* → *tieners*,
+  *adolescenten*, *pubers*, *teenagers*. Ook goed als trefwoord: *'s avonds* (→ *avond*, *nacht*: 0,5 voor het synoniem
+  alleen als het dezelfde tijd aanduidt).
+- **Telt niet:** een klein woord (*als*, *ze*, *op*, *hun*) of *slechter*, *zitten* als trefwoord (zonder die woorden gaat
+  de zoekopdracht nog over hetzelfde); *gsm* nog eens; een hele zin of woordgroep; als synoniem hetzelfde woord of een
+  woord met een andere betekenis (*bed*, *dromen*, *kinderen*: kinderen zijn geen jongeren). *Slapen* met synoniem
+  *slaap* telt wel (een andere vorm vindt andere pagina's).
 - **Vraag 2** (*in één zin, kort mag*): *Waarom zoek je met gsm én smartphone?* → verwacht: zo vind je ook pagina's die
   het andere woord gebruiken. Telt niet: *omdat het hetzelfde is* zonder te zeggen wat je dan meer vindt.
 
@@ -134,7 +143,7 @@ advertenties (*Gesponsord*). Je resultaten kunnen anders zijn dan die van je buu
 | | Wat typte je? | 0–5 |
 |---|---|---|
 | **A** De vraag als zin | `Slapen jongeren slechter als ze 's avonds op hun gsm zitten?` (*ingevuld*) | vak |
-| **B** Trefwoorden met `OR` | vak | vak |
+| **B** Je drie trefwoorden uit deel 1, met `OR` tussen een trefwoord en zijn synoniem | vak | vak |
 | **C** B + een woordgroep tussen aanhalingstekens + één woord met een minteken | vak | vak |
 
 - **Verwacht B:** de trefwoorden uit deel 1 met `OR` tussen twee synoniemen, bv. `slaap jongeren gsm OR smartphone`.
@@ -175,7 +184,7 @@ eerste 5 gaan over de vraag?
 | 0–1' | 1 | *Zo start je* (vaste startdia). |
 | 1–3' | 2 | *Weet je het nog?* (les 5) Vingervraag: *"Win een gsm! Log in met je schoolaccount via deze link." Welk signaal zegt het meest dat dit phishing is?* 1) het vraagt je schoolaccount via een link · 2) er staat een uitroepteken · 3) het gaat over een gsm → **1**. Brug: de groepschat ging over het onderzoek naar slaap; vandaag zoek je wat daar al over geschreven is. |
 | 3–4' | 3 | *Wat kan je straks?* + de opdracht van Ines met de onderzoeksvraag; het eindproduct (het zoekverslag als tekening). |
-| 4–9' | 4 | **Demo** (hardop denkend): zoek A in Google (de vraag als zin), tel de eerste vijf. Vul samen de rij *schermen · gsm · smartphone* in. Typ dan `slaap jongeren gsm OR smartphone` en tel opnieuw. Toon kort het minteken vlak voor een woord. Niet voordoen: de aanhalingstekens en het filter (staan in het werkdocument). |
+| 4–9' | 4 | **Demo** (hardop denkend): zoek A in Google (de vraag als zin), tel de eerste vijf. Vul samen de eerste rij in (*gsm · smartphone*): "ik haal de belangrijke woorden uit de vraag"; de andere twee trefwoorden kiezen ze zelf. Typ dan `slaap jongeren gsm OR smartphone` en tel opnieuw. Toon kort het minteken vlak voor een woord. Niet voordoen: de aanhalingstekens en het filter (staan in het werkdocument). |
 | 9–10' | 5 | *Controle · iedereen antwoordt.* *Je wil geen resultaten over apps. Wat typ je?* 1) `slaap gsm - app` · 2) `slaap gsm -app` · 3) `slaap gsm NOT app` → **2** (onthoud wie 1 of 3 toont). |
 | 10' | 6 | *Zo werk je verder*: de stappen met kloktijden, de hulpvolgorde. Stap 1 (*Start*) doen ze nu. |
 
@@ -195,7 +204,7 @@ Nieuwe handeling in een programma: alleen het filter onder **Tools** (de operato
 
 ## 20. Differentiatie en scaffolding
 
-- Rij *schermen* staat ingevuld; zoekopdracht A staat ingevuld; voorbeelden in de infokaders *mag je overnemen*.
+- Rij *gsm · smartphone* staat ingevuld; zoekopdracht A staat ingevuld; voorbeelden in de infokaders *mag je overnemen*.
 - Wie vastloopt bij C: neem B en zet er `"blauw licht"` en `-kopen` bij (*Toon stapjes* op de lespagina).
 - Snel klaar: de extra opdracht in het Engels.
 
@@ -211,7 +220,7 @@ Op **20 punten**, beoordeeld op het werkdocument. Dezelfde criteria staan als co
 
 | Criterium | Wat wordt beoordeeld? | Punten |
 |---|---|---|
-| Deel 1: trefwoorden en synoniemen | vier vakken (slaap en jongeren, trefwoord en synoniem), 0,5 per vak met één woord dat bij het idee past | 2 |
+| Deel 1: trefwoorden en synoniemen | twee trefwoorden uit de vraag naast *gsm* (0,5 per trefwoord dat zegt waarover je zoekt, bv. *slapen*, *jongeren*), elk met een synoniem met dezelfde betekenis (0,5 per synoniem) | 2 |
 | Deel 1: vraag 2 | met twee woorden vind je ook pagina's die het andere woord gebruiken | 1 |
 | Deel 2: de aantallen | bij A, B en C een getal van 0 tot 5 (één ontbreekt: 0,5; twee of meer: 0) | 1 |
 | Deel 2: zoekopdracht B | alleen trefwoorden, geen zin (1); `OR` in hoofdletters tussen twee synoniemen (1) | 2 |
