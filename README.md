@@ -48,6 +48,9 @@ handeling (het filter onder **Tools**), de uitleg in het werkdocument, zes dia's
 
 - **Startpagina**: *Wat heb je nodig?* in drie beelden, *Dit maak je vandaag* (het zoekverslag als skelet, geen antwoorden), *Na deze
   les kan je* en *Vast?*.
+- **Stap 2, *Toon stapjes*** (bijgestuurd op 26-11-2026, Jonas): *Zoek drie keer: A, B en C* heeft een stapje per zoekopdracht met een
+  tekening van het zoekvak en wat elk stuk betekent; bij B twee keer *Niet* (de zin met OR erbij, alleen `gsm OR smartphone`).
+  *Tel na elke zoekopdracht de resultaten* toont de tabel van deel 2 ingevuld als voorbeeld.
 - **Vier stappen**: 1 *Van vraag naar trefwoorden* (Google openen in een nieuw tabblad, typen in het lichtblauwe vak), 2 *Drie keer
   zoeken* (een zoekopdracht typen, de gewone resultaten tellen), 3 *Filter en zoekverslag* (**Tools** › **Elke periode** › **Afgelopen
   jaar**), 4 *Inleveren*. Elke stap eindigt met *Maak deel n in je werkdocument.* Vette regels van hoogstens 8 woorden. Alle beelden zijn

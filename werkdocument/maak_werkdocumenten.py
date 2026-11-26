@@ -83,8 +83,9 @@ def werkdocument():
 
     # ---- Deel 2: drie keer zoeken
     hs.deel(doc, 2, "Drie keer zoeken")
-    hs.opdracht(doc, "Zoek drie keer in Google: A, B en C. Tel bij elke zoekopdracht hoeveel van de eerste 5 resultaten "
-                     "gaan over slaap én schermen én jongeren. Gebruik het infokader.")
+    hs.opdracht(doc, "Zoek drie keer in Google. A is de vraag van Ines. Bij B typ je geen zin meer: alleen je drie "
+                     "trefwoorden uit deel 1, met OR. Bij C bouw je verder op B. Tel telkens hoeveel van de eerste 5 "
+                     "resultaten gaan over slaap én schermen én jongeren. Gebruik het infokader.")
     hs.infokader(doc, "Zo typ je het in Google", [
         ("Alle woorden erin:", "een spatie tussen de woorden:  slaap jongeren"),
         ("Een van twee woorden:", "OR in hoofdletters ertussen:  gsm OR smartphone"),
@@ -95,9 +96,9 @@ def werkdocument():
     ])
     hs.vraag(doc, "1.  Vul de tabel in: wat typte je, en hoeveel van de eerste 5 resultaten gaan over de vraag (0 tot 5)?")
     hs.tabel(doc, ["Zoekopdracht", "Wat typte je?", "0–5"], [
-        ("A  De vraag als zin", ZOEKOPDRACHT_A, ""),
-        ("B  Je drie trefwoorden uit deel 1, met OR tussen een trefwoord en zijn synoniem", "", ""),
-        ("C  B, plus een woordgroep tussen aanhalingstekens, plus een woord met een minteken", "", ""),
+        ("A  De vraag van Ines, als zin", ZOEKOPDRACHT_A, ""),
+        ("B  Geen zin: je drie trefwoorden uit deel 1, met OR tussen gsm en smartphone", "", ""),
+        ("C  Zoekopdracht B, plus een woordgroep tussen aanhalingstekens en een woord met een minteken", "", ""),
     ], [4.6, B - 4.6 - 1.8, 1.8], invul=(1, 2), voorbeeld_rij=1, rijhoogte=1.5)
     hs.vraag(doc, "2.  Welk soort resultaat van B wilde je kwijt met je minteken? Was het bij C weg? Twee korte zinnen.")
     hs.antwoordvak(doc, 2.0)

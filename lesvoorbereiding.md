@@ -143,9 +143,14 @@ advertenties (*Gesponsord*). Je resultaten kunnen anders zijn dan die van je buu
 | | Wat typte je? | 0–5 |
 |---|---|---|
 | **A** De vraag als zin | `Slapen jongeren slechter als ze 's avonds op hun gsm zitten?` (*ingevuld*) | vak |
-| **B** Je drie trefwoorden uit deel 1, met `OR` tussen een trefwoord en zijn synoniem | vak | vak |
+| **B** Geen zin: je drie trefwoorden uit deel 1, met `OR` tussen gsm en smartphone | vak | vak |
 | **C** B + een woordgroep tussen aanhalingstekens + één woord met een minteken | vak | vak |
 
+- **Bijgestuurd op 26-11-2026** (Jonas: "Moeten ze de zin daarboven aanvullen met OR of enkel zoeken op gsm OR
+  smartphone? Dat is niet super duidelijk"): de opdracht zegt nu *A is de vraag van Ines. Bij B typ je geen zin meer:
+  alleen je drie trefwoorden uit deel 1, met OR. Bij C bouw je verder op B.* Op de lespagina heeft *Toon stapjes* een
+  stapje per zoekopdracht (A, B, C), met een tekening van wat ze typen, wat elk stuk betekent, twee keer *Niet* bij B
+  (de zin met OR erbij; alleen `gsm OR smartphone`), en de tabel van deel 2 ingevuld als voorbeeld.
 - **Verwacht B:** de trefwoorden uit deel 1 met `OR` tussen twee synoniemen, bv. `slaap jongeren gsm OR smartphone`.
   Een tweede `OR` mag (`jongeren OR tieners`).
 - **Verwacht C:** B, plus een woordgroep tussen aanhalingstekens (bv. `"voor het slapengaan"`, `"blauw licht"`,
