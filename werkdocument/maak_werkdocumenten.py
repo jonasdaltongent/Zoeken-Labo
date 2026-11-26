@@ -82,7 +82,7 @@ def werkdocument():
     hs.antwoordvak(doc, 1.6)
 
     # ---- Deel 2: drie keer zoeken
-    hs.deel(doc, 2, "Drie keer zoeken")
+    hs.deel(doc, 2, "Drie keer zoeken", nieuwe_pagina=True)   # elk deel op een eigen blad (Jonas, 26-11-2026)
     hs.opdracht(doc, "Zoek drie keer in Google. A is de vraag van Ines. Bij B typ je geen zin meer: alleen je drie "
                      "trefwoorden uit deel 1, met OR. Bij C bouw je verder op B. Tel telkens hoeveel van de eerste 5 "
                      "resultaten gaan over slaap én schermen én jongeren. Gebruik het infokader.")
