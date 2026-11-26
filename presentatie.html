@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zoeken als een onderzoeker · dia's · Onderzoekslabo</title>
+  <link rel="icon" href="assets/onderzoekslabo-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/slides.css">
+  <style>
+    .klok { font-size: 22px; color: #4D5573; }
+    .compact .two { flex: 0 0 auto; }
+    .compact .panel p { margin-bottom: 10px; }
+    .compact .panel p:last-child { margin-bottom: 0; }
+    .steps1 { margin: 0; padding-left: 1.2em; }
+    .steps1 li { font-size: 27px; margin-bottom: 10px; }
+    .steps1 li:last-child { margin-bottom: 0; }
+    .compact .steps1 li { font-size: 24px; margin-bottom: 5px; }
+    .qhead { font-size: 26px; font-weight: 700; margin: 0 0 6px; line-height: 1.3; }
+    .qcol .opt { font-size: 24px; padding: 7px 16px; }
+    .slide[data-answer] .answer { margin-top: 10px; padding: 10px 16px; font-size: 23px; }
+    /* dia 3: de opdracht van Ines en het zoekverslag als skelet */
+    .ines { background: #FFFDF3; border: 2px solid #E3D9A8; border-left: 8px solid #E0B94A; border-radius: 12px; padding: 14px 20px; font-size: 24px; line-height: 1.3; }
+    .ines b { color: var(--navy-deep); display: block; margin-bottom: 8px; font-size: 22px; }
+    .ines p { margin: 0 0 8px; }
+    .ines p:last-child { margin-bottom: 0; }
+    .ines .vr { font-weight: 700; font-size: 26px; }
+    .bouw { background: #fff; border: 2px solid #A7B1DE; border-radius: 12px; overflow: hidden; font-family: Arial, Helvetica, sans-serif; box-shadow: 0 8px 24px rgba(29,35,64,.14); }
+    .bouw .bk { background: #E4E8F6; color: var(--navy-deep); font-weight: 700; font-size: 24px; padding: 10px 18px; }
+    .bouw .br { display: grid; grid-template-columns: 300px 1fr; gap: 16px; align-items: center; padding: 14px 18px; border-bottom: 2px dashed #D5DAEE; }
+    .bouw .br:last-child { border-bottom: 0; }
+    .bouw .bn { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 23px; color: var(--navy-deep); line-height: 1.2; }
+    .bouw .bn b { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 21px; }
+    .bouw .bb i { display: block; height: 11px; border-radius: 6px; background: #D5DAEE; margin: 8px 0; }
+    .bouw .bb i.kort { width: 45%; } .bouw .bb i.mid { width: 72%; }
+    .kijk { font-size: 22px; color: #4D5573; margin: 10px 0 0; }
+    /* dia 4: de demo. Een tekening van Google, links; de stappen rechts. Kijk naar het rode kader. */
+    .demo { display: grid; grid-template-columns: 560px 1fr; gap: 40px; align-items: start; margin-top: 6px; }
+    .wijs { box-shadow: 0 0 0 3px #fff, 0 0 0 7px #C5221F; position: relative; }
+    .gs { background: #fff; border: 1px solid #DADCE0; border-radius: 14px; box-shadow: 0 4px 16px rgba(60,64,67,.28); padding: 22px 26px; font-family: "Segoe UI", Arial, sans-serif; color: #1F1F1F; }
+    .gs-vak { border: 2px solid #DADCE0; border-radius: 34px; padding: 12px 22px; font-size: 25px; box-shadow: 0 1px 6px rgba(60,64,67,.25); overflow-wrap: anywhere; }
+    .gs-vak.wijs { box-shadow: 0 0 0 3px #fff, 0 0 0 7px #C5221F; }
+    .gs-tel { margin: 16px 0 0; font-size: 23px; color: #5F6368; }
+    .gs-blok { margin-top: 12px; border: 2px dashed #DADCE0; border-radius: 8px; padding: 8px 14px; font-size: 22px; color: #5F6368; background: #F8F9FA; }
+    .gs-blok.ja { border-style: solid; color: #1F1F1F; background: #fff; }
+    .demo .steps1 li { font-size: 28px; margin-bottom: 16px; }
+    .demo .zo { font-size: 22px; color: #4D5573; margin: 4px 0 0; }
+    .ui { font-weight: 700; color: var(--navy-deep); background: var(--peri-soft); padding: 0 8px; border-radius: 6px; white-space: nowrap; }
+    code { font-family: Consolas, "Courier New", monospace; background: var(--peri-soft); padding: 0 6px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+<div class="hud"><span id="counter"></span> · <kbd>→</kbd> verder · <kbd>F</kbd> volledig scherm · <kbd>N</kbd> notities</div>
+<div class="deck"><div class="stage">
+
+<!-- 1 · vaste startdia -->
+<section class="slide start">
+  <div class="start-kop">
+    <div>
+      <p class="kicker">Toegepaste Informatica · les 6</p>
+      <h1>Zoeken als een onderzoeker</h1>
+    </div>
+    <span class="start-zo">Zo start je</span>
+  </div>
+  <ol class="startroute">
+    <li><div class="sr-beeld"><div class="pc-scherm"><span class="pc-avatar"></span><span class="pc-veld">••••••</span></div><div class="pc-voet"></div></div><span class="sr-tekst">Meld je aan op de computer.</span></li>
+    <li><div class="sr-beeld"><span class="url-balk"><img class="logo" src="assets/logos/classroom.svg" alt="">classroom.google.com</span><span class="url-knop">Inloggen</span></div><span class="sr-tekst">Ga in Chrome naar Classroom. Klik op <span class="knop">Inloggen</span>.</span></li>
+    <li><div class="sr-beeld"><span class="login-veld">…<b>@dalton.gent</b></span><span class="login-veld">••••••••</span></div><span class="sr-tekst">Log in met je schoolaccount.</span></li>
+    <li><div class="sr-beeld"><div class="lesgroep"><span class="lesgroep-kop">3MWWE - Informatica</span></div></div><span class="sr-tekst">Klik op je lesgroep.</span></li>
+    <li><div class="sr-beeld"><div class="tabs"><span class="tab-grijs"></span><span class="tab-aan">Schoolwerk</span><span class="tab-grijs"></span></div></div><span class="sr-tekst">Klik op <span class="knop">Schoolwerk</span>.</span></li>
+    <li><div class="sr-beeld"><span class="opdr-rij"><span class="opdr-ic"></span>Les 6 — Zoeken als een onderzoeker</span><span class="opdr-link">Instructies bekijken</span></div><span class="sr-tekst">Klik op de opdracht › <span class="knop">Instructies bekijken</span>.</span></li>
+    <li><div class="sr-beeld"><span class="bijl-chip aan"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 6</span></div><span class="sr-tekst">Klik op de lespagina.</span></li>
+    <li class="klaar">Klaar? Laat de lespagina open en kijk naar het bord.</li>
+  </ol>
+  <template class="note">
+    <p><strong>Instructie, 0–1'. De vaste startdia</strong> (elke les dezelfde). Laat ze op het bord staan terwijl de leerlingen aanmelden.</p>
+    <p>Het <strong>wachtwoord van de computers</strong> staat niet op de dia: de dia's staan openbaar online. Zeg het, of schrijf het op het bord.</p>
+    <p>Ga verder zodra de meesten de lespagina open hebben.</p>
+  </template>
+</section>
+
+<!-- 2 · lesstart -->
+<section class="slide met-mascotte" data-answer>
+  <img class="mascotte" src="assets/mascotte/dalton_denken.webp" alt="" width="240" height="240">
+  <p class="kicker">Lesstart · 2 minuten</p>
+  <h2>Weet je het nog?</h2>
+  <div class="qcol">
+    <p class="qhead">In les 5 kreeg je dit bericht: &ldquo;Win een gsm! Log in met je schoolaccount via deze link.&rdquo; Welk signaal zegt het meest dat het phishing is?</p>
+    <div class="opts">
+      <div class="opt right"><span class="n">1</span>Het vraagt je schoolaccount via een link</div>
+      <div class="opt"><span class="n">2</span>Er staat een uitroepteken</div>
+      <div class="opt"><span class="n">3</span>Het gaat over een gsm</div>
+    </div>
+  </div>
+  <p class="answer">Een bericht dat je account vraagt via een link: dat is het sterkste signaal. Dat onderzoek naar slaap uit de groepschat gaat nu echt van start: vandaag zoek je wat er al over geschreven is.</p>
+  <template class="note">
+    <p><strong>Lesstart (2'), ophalen uit les 5 (do 19-11).</strong> Vraag hardop of met vingers (1, 2 of 3); druk daarna op → voor het antwoord. Het juiste antwoord is 1. Brug naar vandaag: <em>"In de groepschat ging het over het onderzoek naar slaap en schermen. Vandaag zoek je wat er al over geschreven is."</em></p>
+    <p>Gaat het te traag, ga dan na het antwoord meteen door: de instructie is maar 10 minuten.</p>
+  </template>
+</section>
+
+<!-- 3 · lesdoel en eindproduct -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · dit maak je vandaag · kijk naar de onderzoeksvraag</p>
+  <h2 style="margin-bottom:10px">Een zoekverslag voor Ines</h2>
+  <div class="two" style="grid-template-columns: 1fr 1.15fr; gap: 28px; align-items: start">
+    <div class="ines"><b>Een bericht van Ines Coppens</b>
+      <p>Ons labo start een onderzoek naar schermgebruik en slaap. Zoek wat er al over geschreven is.</p>
+      <p class="vr">Slapen jongeren slechter als ze 's avonds op hun gsm zitten?</p>
+    </div>
+    <div class="bouw" role="img" aria-label="Tekening van het zoekverslag in drie delen: 1 trefwoorden, 2 drie keer zoeken, 3 filter en twee resultaten.">
+      <div class="bk">Zoekverslag-onderzoekslabo</div>
+      <div class="br"><span class="bn"><b>1</b> Trefwoorden</span><span class="bb"><i></i><i class="kort"></i></span></div>
+      <div class="br"><span class="bn"><b>2</b> Drie keer zoeken</span><span class="bb"><i></i><i class="mid"></i></span></div>
+      <div class="br"><span class="bn"><b>3</b> Filter en twee resultaten</span><span class="bb"><i class="mid"></i><i class="kort"></i></span></div>
+    </div>
+  </div>
+  <p class="kijk">Je vergelijkt wat elke zoekopdracht oplevert, en legt uit welke het best werkt.</p>
+  <template class="note">
+    <p><strong>Ik doe, 1'. Lesdoel en eindproduct.</strong> Lees het bericht van Ines voor, en de onderzoeksvraag. <em>"Ines vraagt een eerste verkenning: wat is er al over geschreven? Jullie zoeken dat in Google. Straks vergelijk je drie zoekopdrachten en zeg je welke het best werkte."</em></p>
+    <p>Dit is een nieuw soort tekening (het skelet van je werkdocument): lees ze één keer hardop. Drie delen: trefwoorden kiezen, drie keer zoeken en tellen, en een filter met twee bruikbare resultaten. De balkjes zijn plaatsen waar jullie zelf typen. Eventueel als brug: jongeren zoeken vooral via een zoekmachine (Apenstaartjaren 2026, p. 55).</p>
+  </template>
+</section>
+
+<!-- 4 · demo: zoeken -->
+<section class="slide compact">
+  <p class="kicker">Ik doe · demo · kijk naar het rode kader</p>
+  <h2 style="margin-bottom:6px">De vraag of trefwoorden?</h2>
+  <div class="demo">
+    <div class="gs" role="img" aria-label="Tekening van Google. In het zoekvak staat de zoekopdracht slaap jongeren gsm OR smartphone, in een rood kader. Eronder staan een AI-overzicht dat niet meetelt en gewone resultaten die wel meetellen.">
+      <div class="gs-vak wijs">slaap jongeren gsm OR smartphone</div>
+      <div class="gs-blok">AI-overzicht: telt niet</div>
+      <div class="gs-blok ja">Gewone resultaten: tel de eerste 5</div>
+    </div>
+    <div>
+      <ol class="steps1">
+        <li class="reveal-item">Zoek de vraag als zin. Tel de eerste 5 gewone resultaten.</li>
+        <li class="reveal-item">Vul samen de rij <strong>schermen · gsm · smartphone</strong> in.</li>
+        <li class="reveal-item">Typ <code>slaap jongeren gsm OR smartphone</code>. Tel opnieuw.</li>
+        <li class="reveal-item">Een woord uitsluiten? <code>-app</code>: het minteken vlak voor het woord.</li>
+      </ol>
+      <p class="zo">Aanhalingstekens en het filter staan in je werkdocument.</p>
+    </div>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 5'. Demo in Google op het bord, hardop denkend.</strong> Alleen wat nieuw is. De tekening is nieuw: lees ze hardop. <em>"Dit is het zoekvak van Google. Hierin staat wat ik typ. Eronder staan de resultaten. Het AI-overzicht en de advertenties tel ik niet mee: alleen de gewone resultaten."</em></p>
+    <p>Druk vier keer op → en doe elke stap echt. (1) Typ de hele vraag als zin (<em>Slapen jongeren slechter als ze 's avonds op hun gsm zitten?</em>) en tel hardop de eerste 5 gewone resultaten die over slaap én schermen én jongeren gaan. (2) Vul samen de rij in: idee <em>schermen</em>, trefwoord <em>gsm</em>, synoniem <em>smartphone</em>: <em>"een zoekmachine zoekt op woorden, geen zin. Ik haal de belangrijke woorden eruit en zoek een synoniem."</em> (3) Typ <code>slaap jongeren gsm OR smartphone</code> (OR in hoofdletters!) en tel opnieuw. (4) Toon kort <code>-app</code>: vlak voor het woord, zonder spatie.</p>
+    <p><strong>Niet voordoen:</strong> de aanhalingstekens en het filter onder Tools. Dat staat in het werkdocument en op de lespagina. Probeer zoekopdracht A en B vooraf eens uit op de klascomputer, zodat de demo werkt (de resultaten verschillen per persoon en per dag).</p>
+  </template>
+</section>
+
+<!-- 5 · controle -->
+<section class="slide" data-answer>
+  <p class="kicker">Controle · iedereen antwoordt</p>
+  <h2>Een woord uitsluiten</h2>
+  <div class="qcol">
+    <p class="qhead">Je wil geen resultaten over apps. Wat typ je?</p>
+    <div class="opts">
+      <div class="opt"><span class="n">1</span><code>slaap gsm - app</code></div>
+      <div class="opt right"><span class="n">2</span><code>slaap gsm -app</code></div>
+      <div class="opt"><span class="n">3</span><code>slaap gsm NOT app</code></div>
+    </div>
+  </div>
+  <p class="answer">Het minteken staat vlak voor het woord, zonder spatie: <code>-app</code>. Met een spatie of met NOT sluit Google niets uit.</p>
+  <template class="note">
+    <p><strong>Controle (1'). Iedereen antwoordt tegelijk</strong> met 1, 2 of 3 vingers; druk daarna op → voor het antwoord. Onthoud wie 1 of 3 toont: zij blijven bij het begin van de keuzewerktijd even bij jou. Vraag: <em>"Waar staat het minteken ten opzichte van het woord?"</em></p>
+  </template>
+</section>
+
+<!-- 6 · zo werk je verder -->
+<section class="slide compact met-mascotte">
+  <img class="mascotte" src="assets/mascotte/dalton_laptop.webp" alt="" width="240" height="240">
+  <p class="kicker">Keuzewerktijd · <span class="eindtijd">40 minuten</span></p>
+  <h2>Zo werk je verder</h2>
+  <div class="two" style="grid-template-columns: 1.6fr 1fr">
+    <div>
+      <ol class="steps1 kloklijst" data-lesmomenten="2026-11-26/14.35/15.25/3MWWE/8" data-beltijden="8.25-9.15 9.15-10.05 10.25-11.15 11.15-12.05 12.05-12.55 13.45-14.35 14.35-15.25 15.25-16.15 16.15-17.05">
+        <li data-min="3" data-samen>Stap 1 samen: Google en je werkdocument <span class="klok tijd">samen &#10003;</span></li>
+        <li data-min="7">Van vraag naar trefwoorden <span class="klok tijd">7'</span></li>
+        <li data-min="14">Drie keer zoeken <span class="klok tijd">14'</span></li>
+        <li data-min="10">Filter en zoekverslag <span class="klok tijd">10'</span></li>
+        <li data-min="6">Inleveren <span class="klok tijd">6'</span></li>
+      </ol>
+    </div>
+    <div class="panel navy">
+      <p style="font-size:24px"><strong>Vast?</strong><br>1. Het infokader in je werkdocument, of <em>Toon stapjes</em><br>2. Je buur<br>3. Ik</p>
+    </div>
+  </div>
+  <p class="klok" style="margin-top:14px;font-size:24px">
+    <strong>Alles staat in de opdracht in <span class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span></strong> <em>Les 6 — Zoeken als een onderzoeker</em>: de lespagina en rechts onder <em>Jouw werk</em> je werkdocument Zoekverslag-onderzoekslabo.<br>Adres: jonasdaltongent.github.io/Zoeken-Labo/</p>
+  <template class="note">
+    <p><strong>Keuzewerktijd.</strong> Laat deze dia staan zolang ze werken. De kloktijden komen uit de planning; <strong>T</strong> rekent opnieuw vanaf nu.</p>
+    <p><strong>Stap 1 doen ze nu samen (3').</strong> Zeg: <em>"Open de lespagina en klik op stap 1. Open Google in een nieuw tabblad en zoek je werkdocument op. Typ in het lichtblauwe vak. Steek je duim op als Google openstaat."</em> Wie op de vorige dia 1 of 3 koos, of er niet geraakt, blijft 3 tot 5 minuten bij jou; de rest gaat verder met deel 1.</p>
+    <p>Eerste rondgang (stap 1 en 2): typen ze trefwoorden en geen zin? Staat OR in hoofdletters? Staat het minteken vlak tegen het woord? Tellen ze het AI-overzicht en de advertenties niet mee? Tweede rondgang (stap 3): staat er een webadres uit de adresbalk, en geen adres van Google zelf?</p>
+    <p><strong>Laatste minuut:</strong> noem de exitvraag in deel 4 van het werkdocument (<em>een zoekopdracht over stress bij jongeren, met OR</em>), en zeg mondeling dat wie niet klaar is, toch inlevert, of thuis afwerkt vóór vrijdag 27 november om 20.00 uur. Wie vraagt hoe hij inlevert: kijk eerst onder de drie vragen van de zelftest in stap 4. Dit is de laatste les vóór de examens (vanaf 2 december) en Kerstmis: de volgende les is op 7 januari. Wie vertrekt, logt uit of drukt op Windows + L.</p>
+  </template>
+</section>
+
+</div></div>
+<div class="notes" id="notes"></div>
+<script src="js/slides.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "_uitleg": "Wordt gelezen door _tools/zet_opdracht_klaar.py (zie _tools/CLASSROOM-KOPPELING.md). Dit bestand staat openbaar op GitHub: zet hier nooit een e-mailadres of wachtwoord in. {deadline} vult het script zelf in; klas en deadline komen uit lesdoelen.json.",
+  "titel": "Les 6 — Zoeken als een onderzoeker",
+  "onderwerp": "Module 2 — Informatievaardigheden en mediawijsheid",
+  "punten": 20,
+  "instructie": [
+    "Open de lespagina en werk stap 1 tot 4 af.",
+    "Je maakt je zoekverslag in je werkdocument Zoekverslag-onderzoekslabo.",
+    "",
+    "Klik op Inleveren, ten laatste {deadline}."
+  ],
+  "bijlagen": [
+    {
+      "soort": "link",
+      "url": "https://jonasdaltongent.github.io/Zoeken-Labo/"
+    },
+    {
+      "soort": "kopie",
+      "bestand": "werkdocument/Zoekverslag-onderzoekslabo.docx",
+      "naam": "Zoekverslag-onderzoekslabo"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "lesid": "zoeken-labo",
+  "lesnr": "06",
+  "titel": "Zoeken als een onderzoeker",
+  "week": 12,
+  "schooljaar": "2026-2027",
+  "datum": "2026-11-26",
+  "_opmerking_datum": "Donderdag 26 november 2026, 8ste lesuur (14.35-15.25), lokaal 18. De laatste les van 3MWWE voor de examens (vanaf 2-12) en Kerstmis.",
+  "klasgroepen": [
+    "3 MWW"
+  ],
+  "_opmerking_klasgroepen": "De klasgroepcode moet '3 MWW' zijn (met spatie): daarmee vindt _tools/update_leerdoelen.py het blad. De echte klasnaam staat hieronder.",
+  "klasnaam": "3MWWE",
+  "finaliteit": "doorstroomfinaliteit",
+  "lesduur_minuten": 50,
+  "evaluatie": "formatief (portfolio: zoekverslag)",
+  "deadline": "2026-11-27T20:00",
+  "bron": "https://github.com/jonasdaltongent/Zoeken-Labo",
+  "doelen": [
+    {"code": "BV2_13.04", "rol": "kern"},
+    {"code": "BV2_02.05", "rol": "ondersteunend"},
+    {"code": "BV2_06.19", "rol": "contextueel"}
+  ]
+}

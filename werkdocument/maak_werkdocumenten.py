@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""
+maak_werkdocumenten.py
+Genereert het werkdocument voor les 6 "Zoeken als een onderzoeker" (Onderzoekslabo Jongeren & Welzijn, klas 3MWWE):
+
+  Zoekverslag-onderzoekslabo.docx   het werkdocument dat de leerling INLEVERT (wordt in Classroom een Google-document,
+                                    een kopie voor elke leerling)
+
+Gebruik:  python3 maak_werkdocumenten.py     (vereist python-docx en Pillow; huisstijl.py en go-dalton-gent.png
+          staan ernaast)
+
+Geen zip en geen losse bestanden: alles wat de leerling maakt, typt hij IN dit werkdocument.
+
+LET OP bij aanpassen:
+ - Alle namen zijn verzonnen (het labo en Ines Coppens zijn fictief).
+ - Het voorbeeld (rij schermen · gsm · smartphone en zoekopdracht A) staat al ingevuld, in het grijs. Laat het ingevuld.
+ - Elk antwoord staat in een eigen vak, en elk vak hoort bij één criterium van lesvoorbereiding § 22
+   (_afspraken/verbeteren.md, *Een les die je kan verbeteren*). Wijzig je de vakken, wijzig dan § 14 en § 22.
+ - De punten in deel 4 (2 · 1 · 1 · 2 · 3 · 2 · 2 · 4 · 2 · 1 = 20) komen overeen met lesvoorbereiding § 22.
+ - Het codewoord (TREFWOORD) staat bovenaan deel 4. De lespagina toont het pas als de zelftest juist is.
+"""
+import os
+
+import huisstijl as hs
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+UIT = os.path.join(HERE, "Zoekverslag-onderzoekslabo.docx")
+B = hs.BREEDTE
+
+VRAAG = "Slapen jongeren slechter als ze 's avonds op hun gsm zitten?"
+ZOEKOPDRACHT_A = VRAAG
+
+# De criteria van lesvoorbereiding § 22 (samen 20): 2 · 1 · 1 · 2 · 3 · 2 · 2 · 4 · 2 · 1
+CRITERIA = [
+    ("Deel 1: de tabel heeft bij slaap en bij jongeren een trefwoord en een synoniem (één woord per vak).", 2),
+    ("Deel 1: vraag 2 zegt dat je met twee woorden ook pagina's vindt die het andere woord gebruiken.", 1),
+    ("Deel 2: bij A, B en C staat een getal van 0 tot 5.", 1),
+    ("Deel 2: zoekopdracht B bestaat uit trefwoorden (geen zin), met OR in hoofdletters tussen twee synoniemen.", 2),
+    ("Deel 2: zoekopdracht C heeft een woordgroep tussen aanhalingstekens, een minteken vlak voor een woord, en de trefwoorden van B.", 3),
+    ("Deel 2: vraag 2 zegt welk soort resultaat weg moest, en of het bij C weg was.", 2),
+    ("Deel 3: vraag 1 en 2: het filter en de periode, en zoekopdracht D (B of C, met het filter).", 2),
+    ("Deel 3: vraag 3: twee resultaten, elk met titel en een volledig webadres, over slaap en schermen.", 4),
+    ("Deel 3: vraag 4 zegt waarom D beter werkt dan A, met iets wat je in de resultaten zag.", 2),
+    ("Deel 4: de exitvraag is een zoekopdracht met trefwoorden en OR in hoofdletters.", 1),
+]
+
+
+def werkdocument():
+    """In de huisstijl van 19-11-2026 (huisstijl.py): per deel de opdracht, het infokader en de vragen met cijfers.
+    Waar de leerling klikt (Tools, het filter), staat op de lespagina."""
+    doc = hs.nieuw_document()
+    doc.core_properties.title = "Zoekverslag onderzoekslabo - werkdocument"
+    doc.core_properties.author = "Toegepaste Informatica"
+    hs.kopblok(doc, "ZOEKVERSLAG ONDERZOEKSLABO", punten=20)
+
+    hs.kader(doc, "Een bericht van Ines Coppens, Onderzoekslabo Jongeren & Welzijn", [
+        ("Opdracht:", "Ons labo start een onderzoek naar schermgebruik en slaap. Zoek wat er al over geschreven is, "
+                      "en maak een kort zoekverslag."),
+        ("Onderzoeksvraag:", VRAAG),
+    ])
+
+    # ---- Deel 1: van vraag naar trefwoorden
+    hs.deel(doc, 1, "Van vraag naar trefwoorden")
+    hs.opdracht(doc, "Haal uit de onderzoeksvraag drie ideeën. Kies bij elk idee een trefwoord en een synoniem. "
+                     "Gebruik het infokader. De eerste rij is een voorbeeld: je mag het overnemen.")
+    hs.infokader(doc, "Van vraag naar trefwoorden", [
+        ("Zoekmachine:", "zoekt op woorden. Typ dus geen hele vraag."),
+        ("Idee:", "een belangrijk ding uit de vraag. Kies per idee één trefwoord."),
+        ("Synoniem:", "een ander woord met dezelfde betekenis. Een Engels woord mag ook."),
+        ("Kleine woorden", "(als, ze, op, hun) laat je weg."),
+    ])
+    hs.vraag(doc, "1.  Vul de tabel in. Eén woord per vak.")
+    hs.tabel(doc, ["Idee", "Trefwoord", "Synoniem"], [
+        ("schermen", "gsm", "smartphone"),
+        ("slaap", "", ""),
+        ("jongeren", "", ""),
+    ], [3.6, 6.7, B - 10.3], invul=(1, 2), voorbeeld_rij=1)
+    hs.vraag(doc, "2.  Waarom zoek je met gsm én smartphone? Eén zin, kort mag.")
+    hs.antwoordvak(doc, 1.6)
+
+    # ---- Deel 2: drie keer zoeken
+    hs.deel(doc, 2, "Drie keer zoeken")
+    hs.opdracht(doc, "Zoek drie keer in Google: A, B en C. Tel bij elke zoekopdracht hoeveel van de eerste 5 resultaten "
+                     "gaan over slaap én schermen én jongeren. Gebruik het infokader.")
+    hs.infokader(doc, "Zo typ je het in Google", [
+        ("Alle woorden erin:", "een spatie tussen de woorden:  slaap jongeren"),
+        ("Een van twee woorden:", "OR in hoofdletters ertussen:  gsm OR smartphone"),
+        ("Een woord niet:", "een minteken vlak voor het woord, zonder spatie:  -app"),
+        ("Precies deze woorden:", "tussen aanhalingstekens:  \"blauw licht\""),
+        ("Tellen:", "alleen de gewone resultaten, niet het AI-overzicht en niet de advertenties (Gesponsord). "
+                    "Je buur telt misschien andere resultaten: dat is normaal."),
+    ])
+    hs.vraag(doc, "1.  Vul de tabel in: wat typte je, en hoeveel van de eerste 5 resultaten gaan over de vraag (0 tot 5)?")
+    hs.tabel(doc, ["Zoekopdracht", "Wat typte je?", "0–5"], [
+        ("A  De vraag als zin", ZOEKOPDRACHT_A, ""),
+        ("B  Trefwoorden uit deel 1, met OR", "", ""),
+        ("C  B, plus een woordgroep tussen aanhalingstekens, plus een woord met een minteken", "", ""),
+    ], [4.6, B - 4.6 - 1.8, 1.8], invul=(1, 2), voorbeeld_rij=1, rijhoogte=1.5)
+    hs.vraag(doc, "2.  Welk soort resultaat van B wilde je kwijt met je minteken? Was het bij C weg? Twee korte zinnen.")
+    hs.antwoordvak(doc, 2.0)
+
+    # ---- Deel 3: filter en zoekverslag
+    hs.deel(doc, 3, "Filter en zoekverslag", nieuwe_pagina=True)
+    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht en kies twee bruikbare resultaten. Gebruik het infokader.")
+    hs.infokader(doc, "Een filter", [
+        ("Filter:", "een keuze onder het zoekvak die maar een deel van de resultaten toont, bv. alleen het afgelopen jaar."),
+        ("Weer weg:", "Wissen."),
+        ("Webadres:", "klik op het resultaat. Het adres staat bovenaan in de adresbalk: kopieer het met Ctrl + C. "
+                      "Een adres dat met google.com begint, is geen goed adres."),
+        ("Bruikbaar:", "het gaat over slaap én schermen."),
+    ])
+    hs.vraag(doc, "1.  Welk filter koos je, en welke periode? Kort mag.")
+    hs.tabel(doc, ["Welk filter?", "Welke periode?"], [("", "")], [B / 2, B / 2], invul=(0, 1), rijhoogte=1.1)
+    hs.vraag(doc, "2.  Zoekopdracht D: je beste zoekopdracht (B of C), met het filter. Kopieer wat je typte.")
+    hs.antwoordvak(doc, 1.4)
+    hs.vraag(doc, "3.  Kies twee resultaten die bruikbaar zijn voor het labo. Schrijf de titel en het webadres.")
+    hs.tabel(doc, ["", "Titel", "Webadres"], [("Resultaat 1", "", ""), ("Resultaat 2", "", "")],
+             [2.6, 6.6, B - 9.2], invul=(1, 2), rijhoogte=1.5)
+    hs.vraag(doc, "4.  Waarom vond je met D meer bruikbare resultaten dan met A? Gebruik iets wat je zag. Twee zinnen.")
+    hs.antwoordvak(doc, 2.4)
+
+    # ---- Deel 4: klaar
+    hs.deel(doc, 4, "Klaar?", nieuwe_pagina=True)
+    hs.opdracht(doc, "Typ het codewoord. Kruis aan wat klopt. Beantwoord de exitvraag.")
+    hs.vraag(doc, "Het codewoord van de zelftest (stap 4 op de lespagina):")
+    hs.antwoordvak(doc, 0.9)
+    hs.controletabel(doc, CRITERIA)
+    hs.vraag(doc, "Exitvraag: een vriend zoekt informatie over stress bij jongeren tijdens de examens. "
+                  "Schrijf één zoekopdracht met OR. Kort mag.")
+    hs.antwoordvak(doc, 1.4)
+
+    # ---- Extra
+    hs.deel(doc, None, "Extra — niet verplicht", nieuwe_pagina=True)
+    hs.opdracht(doc, "Zoek je beste zoekopdracht in het Engels. Tel opnieuw de eerste 5 resultaten. "
+                     "Je mag dit voorbeeld overnemen: sleep teenagers phone OR smartphone")
+    hs.vraag(doc, "1.  Wat typte je?")
+    hs.antwoordvak(doc, 1.2)
+    hs.vraag(doc, "2.  Hoeveel van de eerste 5 resultaten gaan over de vraag (0 tot 5)? Zijn het er meer of minder dan bij D?")
+    hs.antwoordvak(doc, 1.6)
+
+    doc.save(UIT)
+
+
+if __name__ == "__main__":
+    werkdocument()
+    print("Gemaakt: Zoekverslag-onderzoekslabo.docx")

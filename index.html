@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lespagina · Les 6 · Zoeken als een onderzoeker · Onderzoekslabo</title>
+  <link rel="icon" href="assets/logos/lespagina-icon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-storage="zoeken-labo_v1_" data-modus-start="kort" data-laatste-stap="4" data-ai-hulp="uit">
+
+<!-- Pictogrammen: eenvoudige lijntekeningen, eigen werk. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4 2.5 4H5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2a5 5 0 0 1 5 5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M4 14v6h16v-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10.5V6a1.5 1.5 0 0 1 3 0v7.5"/><path d="M8 11.5l-1.5-1.5a1.6 1.6 0 0 0-2.3 2.3l3.6 4.2A6.5 6.5 0 0 0 17 13.5"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<div class="teacher-banner">Leraarweergave: de roze kaders tonen waar je een screenshot kan plaatsen. Leerlingen zien die kaders niet.</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html" title="Naar het begin van de les">
+      <img src="assets/onderzoekslabo-logo.svg" alt="Onderzoekslabo Jongeren &amp; Welzijn">
+      <span class="brand-lesson">Les 6 · Zoeken als een onderzoeker</span>
+    </a>
+    <span class="topbar-spacer"></span>
+    <img class="dalton-mark" src="assets/dalton-gent-logo.png" alt="GO! Dalton Gent">
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ============ LINKS: de route ============ -->
+  <nav class="route" aria-label="Stappenplan">
+    <p class="route-title">Stappenplan</p>
+    <button class="nav-btn" type="button" data-step="start"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="nav-lbl">Start</span></button>
+    <button class="nav-btn" type="button" data-step="1"><span class="nav-num"><span class="nav-n">1</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Van vraag naar trefwoorden</span></button>
+    <button class="nav-btn" type="button" data-step="2"><span class="nav-num"><span class="nav-n">2</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Drie keer zoeken</span></button>
+    <button class="nav-btn" type="button" data-step="3"><span class="nav-num"><span class="nav-n">3</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Filter en zoekverslag</span></button>
+    <button class="nav-btn" type="button" data-step="4"><span class="nav-num"><span class="nav-n">4</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Inleveren</span></button>
+    <button class="nav-btn extra" type="button" data-step="extra"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="nav-lbl">Extra</span></button>
+  </nav>
+
+  <!-- ============ MIDDEN: één stap tegelijk ============ -->
+  <main id="main">
+
+    <!-- ===== START ===== -->
+    <section class="pane" id="pane-start" aria-labelledby="h-start">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-where">Toegepaste Informatica · les 6</span></div>
+            <h1 id="h-start">Zoeken als een onderzoeker</h1>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_welkom.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Ines Coppens van het Onderzoekslabo start een onderzoek naar schermgebruik en slaap. Jij zoekt wat er al over geschreven is.</p>
+
+          <h2 class="sec">Wat heb je nodig?</h2>
+          <ol class="nodig">
+            <li class="nodig-item">
+              <div class="mock mock-opdracht" aria-hidden="true"><div class="mo-midden"><div class="mo-titel"><img class="logo" src="assets/logos/classroom.svg" alt="">Les 6 — Zoeken als een onderzoeker</div><div class="mo-chip"><img class="logo" src="assets/logos/lespagina.webp" alt=""><span>Lespagina · Les 6</span></div></div><div class="mo-werk"><div class="mo-werk-kop">Jouw werk</div><div class="mo-chip"><img class="logo" src="assets/logos/docs.svg" alt=""><span>Zoekverslag-onderzoekslabo</span></div><div class="mo-knop">Inleveren</div></div></div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/classroom.svg" alt="">De opdracht in Google Classroom</p>
+              <p class="nodig-uitleg">Hier begin je. Hier lever je in.</p>
+            </li>
+            <li class="nodig-item">
+              <div class="mock mock-lespagina" aria-hidden="true">
+                <div class="ml-balk"></div>
+                <div class="ml-midden">
+                  <div class="ml-route"><span></span><span></span><span></span><span></span></div>
+                  <div class="ml-stap"><span class="ml-tag">Stap 1</span><span class="ml-lijn"></span><span class="ml-lijn kort"></span><span class="ml-lijn"></span></div>
+                </div>
+                <div class="ml-hier">Je bent hier</div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/lespagina.webp" alt="">Deze lespagina</p>
+              <p class="nodig-uitleg">Hier lees je wat je moet doen.</p>
+            </li>
+            <li class="nodig-item inleveren">
+              <div class="mock mock-werkdocument" aria-hidden="true">
+                <div class="mw-balk"><img class="logo" src="assets/logos/docs.svg" alt="">Zoekverslag-onderzoekslabo</div>
+                <div class="mw-blad">
+                  <div class="mw-venster">
+                    <div class="mw-kop">Deel 1 — Van vraag naar trefwoorden</div>
+                    <div class="mw-rijen"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </div>
+              <p class="nodig-naam"><img class="logo" src="assets/logos/docs.svg" alt="">Je werkdocument Zoekverslag-onderzoekslabo</p>
+              <p class="nodig-uitleg">Hier werk je. Dit lever je in.</p>
+            </li>
+          </ol>
+
+          <h2 class="sec">Dit maak je vandaag</h2>
+          <div class="vandaag">
+            <div class="mailbouw" role="img" aria-label="Tekening van het zoekverslag in drie delen: 1 trefwoorden en synoniemen, 2 drie keer zoeken, 3 filter en twee resultaten.">
+              <div class="mb-kop">Zoekverslag-onderzoekslabo</div>
+              <div class="mb-rij"><span class="mb-naam"><b>1</b> Trefwoorden</span><span class="mb-balk"><i></i><i class="kort"></i></span></div>
+              <div class="mb-rij"><span class="mb-naam"><b>2</b> Drie keer zoeken</span><span class="mb-balk"><i></i><i class="mid"></i></span></div>
+              <div class="mb-rij"><span class="mb-naam"><b>3</b> Filter en twee resultaten</span><span class="mb-balk"><i class="mid"></i><i class="kort"></i></span></div>
+            </div>
+            <p>Een kort zoekverslag: wat vind je met welke zoekopdracht?</p>
+          </div>
+
+          <h2 class="sec">Na deze les kan je</h2>
+          <ul class="doelen">
+            <li>trefwoorden en synoniemen kiezen;</li>
+            <li>zoeken met OR, een minteken en aanhalingstekens;</li>
+            <li>uitleggen waarom een zoekopdracht beter werkt.</li>
+          </ul>
+
+          <h2 class="sec">Vast? Probeer het in deze volgorde</h2>
+          <ol class="vast">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg><span>Het infokader in je werkdocument, of <em>Toon stapjes</em></span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><span>Je buur</span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-hand"/></svg><span>Je leraar</span></li>
+          </ol>
+
+          <p class="start-cta"><button class="btn btn-primary" type="button" data-goto="1">Start met stap 1 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></p>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 1 ===== -->
+    <section class="pane" id="pane-1" aria-labelledby="h-1">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 1</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 1</span></div><h2 id="h-1">Van vraag naar trefwoorden</h2></header>
+        <div class="card-body">
+          <p class="intro">Je haalt de trefwoorden uit de vraag van Ines.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Open Google in een nieuw tabblad.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik rechts van je tabbladen op het plusje.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome: Google Classroom, Lespagina Les 6 en Zoekverslag-onderzoekslabo. Het plusje rechts ervan staat in een rood kader."><span class="tt-tab"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 6</span><span class="tt-tab actief"><img class="logo" src="assets/logos/docs.svg" alt="">Zoekverslag-onderzoekslabo</span><span class="tt-tab wijs" style="flex:0 0 auto">+</span></div></li>
+<li><p>Typ <strong>google.com</strong> en druk op <strong>Enter</strong>.</p></li>
+</ol>
+</details></li>
+<li><span class="doe-tekst">Typ je antwoord in het lichtblauwe vak.</span><span class="sub">Typ in het vak, niet ernaast.</span></li>
+<li><span class="doe-tekst">Maak deel 1 in je werkdocument.</span></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat er een zin in je vak?</strong> Hou één woord over.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="start"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Start</button><button class="btn btn-primary" type="button" data-goto="2">Stap 2 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 2 ===== -->
+    <section class="pane" id="pane-2" aria-labelledby="h-2">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 2</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 2</span></div><h2 id="h-2">Drie keer zoeken</h2></header>
+        <div class="card-body">
+          <p class="intro">Je ziet wat elke zoekopdracht oplevert.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Typ een zoekopdracht in Google.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik in het zoekvak. Typ je zoekopdracht en druk op <strong>Enter</strong>.</p><div class="gzoek" role="img" aria-label="Tekening van het zoekvak van Google met de zoekopdracht slaap jongeren gsm OR smartphone. Het zoekvak staat in een rood kader."><div class="gz-vak wijs">slaap jongeren gsm OR smartphone</div></div></li>
+<li><p>Zoekopdracht C: neem B en zet er <strong>"blauw licht"</strong> en <strong>-kopen</strong> bij.</p><div class="gzoek" role="img" aria-label="Tekening van het zoekvak van Google met de zoekopdracht slaap jongeren gsm OR smartphone, blauw licht tussen aanhalingstekens, en -kopen. Het zoekvak staat in een rood kader."><div class="gz-vak wijs">slaap jongeren gsm OR smartphone "blauw licht" -kopen</div></div><span class="sub">Dit voorbeeld mag je overnemen.</span></li>
+</ol>
+</details></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Tel de gewone resultaten.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Tel de eerste 5 gewone resultaten. Sla het AI-overzicht en de advertenties over.</p><div class="gres" role="img" aria-label="Tekening van een pagina met zoekresultaten. Boven staan het AI-overzicht en een advertentie met Gesponsord: die tellen niet mee. Eronder staan gewone resultaten: die tellen wel mee."><div class="gr-blok nee"><span class="gr-naam">AI-overzicht <span>telt niet</span></span><i class="gr-lijn"></i><i class="gr-lijn kort"></i></div><div class="gr-blok nee"><span class="gr-naam">Gesponsord <span>telt niet</span></span><i class="gr-lijn"></i><i class="gr-lijn kort"></i></div><div class="gr-blok ja"><span class="gr-naam">Gewoon resultaat 1 <span>telt</span></span><i class="gr-lijn"></i><i class="gr-lijn kort"></i></div><div class="gr-blok ja"><span class="gr-naam">Gewoon resultaat 2 <span>telt</span></span><i class="gr-lijn"></i><i class="gr-lijn kort"></i></div></div></li>
+</ol>
+</details><span class="sub">Je buur telt misschien andere resultaten: dat is normaal.</span></li>
+<li><span class="doe-tekst">Maak deel 2 in je werkdocument.</span></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Staat er bovenaan een AI-overzicht?</strong> Tel het niet mee.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="1"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 1</button><button class="btn btn-primary" type="button" data-goto="3">Stap 3 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 3 ===== -->
+    <section class="pane" id="pane-3" aria-labelledby="h-3">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-step">Stap 3</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 3</span></div><h2 id="h-3">Filter en zoekverslag</h2></header>
+        <div class="card-body">
+          <p class="intro">Een filter laat maar een deel van de resultaten zien.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><details class="stapjes"><summary><span class="doe-tekst">Kies een filter onder <span class="ui">Tools</span>.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Zoek je beste zoekopdracht. Klik onder het zoekvak op <span class="ui">Tools</span>.</p><div class="gzoek" role="img" aria-label="Tekening van het zoekvak van Google met daaronder de tabs Alle, Afbeeldingen, Video's, Nieuws en Tools. Tools staat in een rood kader."><div class="gz-vak">slaap jongeren gsm OR smartphone</div><div class="gz-tabs"><span class="aan">Alle</span><span>Afbeeldingen</span><span>Video's</span><span>Nieuws</span><span class="wijs">Tools</span></div></div></li>
+<li><p>Klik op <span class="ui">Elke periode</span>.</p><div class="gzoek" role="img" aria-label="Tekening van het menu van Tools met Elke taal, Elke periode in een rood kader, Alle resultaten en Geavanceerd zoeken."><div class="gz-lijst"><div>Elke taal</div><div class="wijs">Elke periode</div><div>Alle resultaten</div><div>Geavanceerd zoeken</div></div></div></li>
+<li><p>Kies <span class="ui">Afgelopen jaar</span>.</p><div class="gzoek" role="img" aria-label="Tekening van de lijst met periodes: Elke periode, Afgelopen uur, Afgelopen 24 uur, Afgelopen week, Afgelopen maand, Afgelopen jaar in een rood kader, en Aangepaste periode."><div class="gz-lijst"><div>Elke periode</div><div>Afgelopen uur</div><div>Afgelopen 24 uur</div><div>Afgelopen week</div><div>Afgelopen maand</div><div class="wijs">Afgelopen jaar</div><div>Aangepaste periode…</div></div></div></li>
+</ol>
+</details><span class="sub">Weer weg: klik onder <span class="ui">Tools</span> op <span class="ui">Wissen</span>.</span></li>
+<li><span class="doe-tekst">Maak deel 3 in je werkdocument.</span></li>
+            </ol>
+          </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Begint je webadres met google.com?</strong> Klik eerst op het resultaat. Kopieer dan het adres.</p></div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="2"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 2</button><button class="btn btn-primary" type="button" data-goto="4">Inleveren <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== STAP 4 ===== -->
+    <section class="pane" id="pane-4" aria-labelledby="h-4">
+      <article class="card">
+        <header class="card-head met-mascotte">
+          <div>
+            <div class="tags"><span class="tag tag-step">Stap 4</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg> Inleveren</span><span class="tag tag-where"><img class="logo" src="assets/logos/docs.svg" alt=""> Werkdocument, deel 4</span></div>
+            <h2 id="h-4">Inleveren</h2>
+          </div>
+          <img class="mascotte-kop" src="assets/mascotte/dalton_inleveren.webp" alt="" width="120" height="120">
+        </header>
+        <div class="card-body">
+          <p class="intro">Beantwoord eerst de drie vragen: zijn ze allemaal juist, dan zie je hoe je inlevert.</p>
+          <div class="quiz">
+            <div class="quiz-q" data-ok="Juist. OR zegt: het ene woord, het andere woord, of allebei. Zo vind je meer." data-nok="Nog niet. Kijk in deel 2 in het infokader: wat doet OR?">
+              <p>1. Waarom zet je OR tussen gsm en smartphone?</p>
+              <div class="opts">
+                <button type="button" data-right>Zo vind je pagina's met het ene of het andere woord</button>
+                <button type="button">Zo vind je alleen pagina's met allebei de woorden</button>
+                <button type="button">Zo vind je geen pagina's met smartphone</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. Het minteken staat vlak voor het woord, zonder spatie." data-nok="Nog niet. Kijk in deel 2 in het infokader: waar staat het minteken?">
+              <p>2. Welke zoekopdracht sluit pagina's over baby's uit?</p>
+              <div class="opts">
+                <button type="button">slaap jongeren - baby</button>
+                <button type="button" data-right>slaap jongeren -baby</button>
+                <button type="button">slaap jongeren NOT baby</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. Het AI-overzicht en de advertenties tel je niet mee." data-nok="Nog niet. Kijk in deel 2 in het infokader: wat tel je?">
+              <p>3. Je telt de eerste 5 resultaten. Wat tel je niet mee?</p>
+              <div class="opts">
+                <button type="button">Een resultaat van een krant</button>
+                <button type="button" data-right>Het AI-overzicht</button>
+                <button type="button">Een resultaat van een school</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+          </div>
+          <p class="slot" aria-live="polite" data-codewoord="TREFWOORD"><svg class="ic ic-dicht" aria-hidden="true"><use href="#i-lock"/></svg><svg class="ic ic-open" aria-hidden="true"><use href="#i-check-circle"/></svg><span class="slot-tekst">Beantwoord de drie vragen hierboven juist. Dan zie je hier hoe je inlevert.</span></p>
+          <div class="todo-box" data-na-zelftest="c4z">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst">Maak deel 4 in je werkdocument.</span><span class="sub">Het codewoord staat in de groene regel hierboven.</span></li>
+<li><details class="stapjes"><summary><span class="doe-tekst">Lever in.</span><span class="stapjes-knop" aria-hidden="true"></span></summary>
+<ol class="klein">
+<li><p>Klik bovenaan op het tabblad <strong class="met-logo"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</strong>.</p><div class="teken-tabs" role="img" aria-label="Tekening van de tabbladen bovenaan in Chrome. Het tabblad Google Classroom staat in een rood kader."><span class="tt-tab wijs"><img class="logo" src="assets/logos/classroom.svg" alt="">Google Classroom</span><span class="tt-tab"><img class="logo" src="assets/logos/lespagina.webp" alt="">Lespagina · Les 6</span><span class="tt-tab actief"><img class="logo" src="assets/logos/docs.svg" alt="">Zoekverslag-onderzoekslabo</span></div></li>
+<li><p>Zoek rechts, bij <strong>Jouw werk</strong>, de knop <span class="ui">Inleveren</span>. Klik erop.</p></li>
+<li><p>Klik in het venster <em>Je werk inleveren?</em> nog eens op <span class="ui">Inleveren</span>.<span class="sub">Daarna staat er rechts <em>Ingeleverd</em>.</span></p></li>
+</ol>
+</details></li>
+            </ol>
+            <figure class="clip"><video src="assets/video/inleveren.mp4" poster="assets/video/inleveren.jpg" autoplay loop muted playsinline controls preload="metadata" aria-label="Filmpje: rechts, bij Jouw werk, op Inleveren klikken; in het venster Je werk inleveren? nog eens op Inleveren klikken; daarna staat er Ingeleverd."></video><figcaption>Filmpje van 10 seconden: zo lever je in. Het is een andere opdracht, de knoppen zijn dezelfde.</figcaption></figure>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="3"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 3</button><button class="btn btn-primary" type="button" data-goto="extra">Extra <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></footer>
+      </article>
+    </section>
+
+
+    <!-- ===== EXTRA ===== -->
+    <section class="pane" id="pane-extra" aria-labelledby="h-extra">
+      <article class="card">
+        <header class="card-head"><div class="tags"><span class="tag tag-extra">Extra · niet verplicht</span></div><h2 id="h-extra">Zoeken in het Engels</h2></header>
+        <div class="card-body">
+          <p class="intro">Alleen als je ingeleverd hebt en tijd over hebt. Het telt niet mee.</p>
+          <div class="todo-box">
+            <div class="todo-head"><h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3></div>
+            <ol class="doe">
+<li><span class="doe-tekst">Maak het Extra in je werkdocument.</span><span class="sub">Je hoeft niet opnieuw in te leveren.</span></li>
+            </ol>
+          </div>
+        </div>
+        <footer class="card-nav"><button class="btn" type="button" data-goto="4"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Inleveren</button><button class="btn" type="button" data-goto="start">Naar het begin</button></footer>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ============ RECHTS: de checklist ============ -->
+  <aside class="checklist leeg" id="checklist" aria-labelledby="h-cl">
+    <div class="cl-head">
+      <h2 id="h-cl">Checklist</h2>
+      <div class="cl-bar" role="progressbar" aria-label="Voortgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="cl-fill" id="clFill"></div></div>
+      <p class="cl-count" id="clCount">0 van 0 klaar</p>
+    </div>
+    <div class="cl-body">
+      <div class="cl-group" data-step="1"><h3>1 · Van vraag naar trefwoorden</h3>
+        <label class="cl-item"><input type="checkbox" id="c1a"><span>Deel 1: trefwoorden en synoniemen</span></label>
+      </div>
+      <div class="cl-group" data-step="2"><h3>2 · Drie keer zoeken</h3>
+        <label class="cl-item"><input type="checkbox" id="c2a"><span>Deel 2: zoekopdracht A, B en C met de aantallen</span></label>
+      </div>
+      <div class="cl-group" data-step="3"><h3>3 · Filter en zoekverslag</h3>
+        <label class="cl-item"><input type="checkbox" id="c3a"><span>Deel 3: filter en zoekopdracht D</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3b"><span>Deel 3: twee resultaten met webadres</span></label>
+      </div>
+      <div class="cl-group" data-step="4"><h3>4 · Inleveren</h3>
+        <label class="cl-item"><input type="checkbox" id="c4z"><span>Zelftest: alle drie juist</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4a"><span>Deel 4: codewoord, controletabel, exitvraag</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4b"><span>Werkdocument ingeleverd</span></label>
+      </div>
+    </div>
+    <div class="cl-foot">
+      <button class="btn cl-toggle" type="button" id="clToggle" aria-expanded="false">Toon alles</button>
+      <button class="btn" type="button" id="btnReset">Vinkjes wissen</button>
+      <p class="cl-note">Je vinkjes staan alleen op deze computer. Er wordt niets doorgestuurd.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- ============ Klaar! ============ -->
+<div class="klaar-overlay" id="klaar" role="dialog" aria-modal="true" aria-labelledby="h-klaar" hidden>
+  <div class="klaar-card">
+    <img class="mascotte-klaar" src="assets/mascotte/dalton_succes.webp" alt="" width="150" height="150">
+    <h2 id="h-klaar">Je zoekverslag is klaar!</h2>
+    <p>Alles is afgevinkt en ingeleverd. Heb je nog tijd? Probeer dan het <strong>Extra</strong>.</p>
+    <button class="btn btn-primary" type="button" id="klaarSluit">Sluiten</button>
+  </div>
+</div>
+
+<footer class="site">
+  Toegepaste Informatica · GO! Dalton Gent · Het Onderzoekslabo Jongeren &amp; Welzijn is fictief. Alle namen en berichten zijn verzonnen.
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
