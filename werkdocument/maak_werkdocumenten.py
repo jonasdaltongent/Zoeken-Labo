@@ -78,21 +78,32 @@ def werkdocument():
 
     # ---- Deel 2: drie keer zoeken
     hs.deel(doc, 2, "Drie keer zoeken", nieuwe_pagina=True)   # elk deel op een eigen blad (Jonas, 26-11-2026)
-    hs.opdracht(doc, "Zoek drie keer in Google. A is de vraag van Ines. Bij B typ je geen zin meer: alleen je drie "
-                     "trefwoorden uit deel 1, met OR. Bij C bouw je verder op B. Tel telkens hoeveel van de eerste 5 "
-                     "resultaten gaan over slaap én schermen én jongeren.")
+    p = hs.opdracht(doc, "Zoek drie keer in Google.")
+    # Elke zin op een eigen regel (Jonas, in het Google-document, 26-11-2026).
+    for zin in ("A is de vraag van Ines.", "Bij B typ je geen zin meer: alleen je drie trefwoorden uit deel 1, met OR.",
+                "Bij C bouw je verder op B.",
+                "Tel telkens hoeveel van de eerste 5 resultaten gaan over slaap én schermen én jongeren."):
+        p.add_run().add_break()
+        p.add_run(zin).bold = True
     hs.vraag(doc, "1.  Vul de tabel in: wat typte je, en hoeveel van de eerste 5 resultaten gaan over de vraag (0 tot 5)?")
-    hs.tabel(doc, ["Zoekopdracht", "Wat typte je?", "0–5"], [
+    t = hs.tabel(doc, ["Zoekopdracht", "Wat typte je?", "0–5"], [
         ("A  De vraag van Ines, als zin", ZOEKOPDRACHT_A, ""),
         ("B  Geen zin: je drie trefwoorden uit deel 1, met OR tussen gsm en smartphone", "", ""),
-        ("C  Zoekopdracht B, plus een woordgroep tussen aanhalingstekens en een woord met een minteken", "", ""),
+        ("C  Zoekopdracht B + een woordgroep tussen aanhalingstekens en een woord met een minteken", "", ""),
     ], [4.6, B - 4.6 - 1.8, 1.8], invul=(1, 2), voorbeeld_rij=1, rijhoogte=1.5)
+    # Bij C staan de woordgroep en het woord erbij, in het vet (Jonas, in het Google-document, 26-11-2026).
+    p = t.rows[3].cells[0].paragraphs[0]
+    for label, woord in (("Woordgroep: ", "Blauw licht"), ("Woord dat niet in de zoekresultaten mag zitten: ", "kopen")):
+        p.add_run().add_break()
+        p.add_run(label)
+        p.add_run(woord).bold = True
     hs.vraag(doc, "2.  Welk soort resultaat van B wilde je kwijt met je minteken? Was het bij C weg? Twee korte zinnen.")
     hs.antwoordvak(doc, 2.0)
 
     # ---- Deel 3: filter en zoekverslag
     hs.deel(doc, 3, "Filter en zoekverslag", nieuwe_pagina=True)
-    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht en kies twee bruikbare resultaten.")
+    hs.opdracht(doc, "Voeg een filter toe aan je beste zoekopdracht (A,B of C) en kies twee bruikbare "
+                     "resultaten.")   # (A,B of C): Jonas, in het Google-document, 26-11-2026
     hs.vraag(doc, "1.  Welk filter koos je, en welke periode? Kort mag.")
     hs.tabel(doc, ["Welk filter?", "Welke periode?"], [("", "")], [B / 2, B / 2], invul=(0, 1), rijhoogte=1.1)
     hs.vraag(doc, "2.  Zoekopdracht D: je beste zoekopdracht (B of C), met het filter. Kopieer wat je typte.")

@@ -688,3 +688,5 @@ body.js .slot { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.2r
 .ab-pijlen { color: var(--muted); letter-spacing: .25rem; white-space: nowrap; }
 .ab-vak { flex: 1; background: #fff; border-radius: 999px; padding: .25rem .7rem; overflow: hidden; }
 .ab-adres { background: #C9DCF8; padding: 0 .1rem; white-space: nowrap; }
+/* Een woord dat de leerling niet mag missen in het blauwe kader (Jonas, 26-11-2026: "verplicht" bij aanhalingstekens). */
+.info-body .verplicht { background: var(--blush); color: var(--warn); font-weight: 700; border-radius: 4px; padding: 0 .3rem; text-transform: uppercase; letter-spacing: .04em; font-size: .9em; }
