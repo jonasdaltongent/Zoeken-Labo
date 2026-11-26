@@ -177,6 +177,14 @@ Google wisselen per zoekopdracht en per dag; ze zijn niet nodig. `assets/screens
 cd "/Volumes/Littlecisboy/Google drive/Toegepaste Informatica/2026-2027/W12 - Les 06 - MWW - Zoeken als een onderzoeker/werkdocument" && python3 maak_werkdocumenten.py
 ```
 
+Het script maakt ook de **verbetersleutel**: hetzelfde werkdocument met elk lichtblauw vak ingevuld (in het groen, met
+wat niet telt in het grijs), in `werkdocument/sleutel/` (niet op GitHub). Zet ze daarna privé in je Drive (Mijn Drive ›
+Verbetersleutels) en op de overzichtspagina (knop **Sleutel**):
+
+```bash
+cd "/Volumes/Littlecisboy/Google drive/Toegepaste Informatica" && python3 _tools/zet_sleutel_klaar.py "2026-2027/W12 - Les 06 - MWW - Zoeken als een onderzoeker" && python3 _tools/maak_overzicht.py
+```
+
 ## 7. Leerplandoelen in je jaaroverzicht
 
 `lesdoelen.json` (klasgroep `3 MWW`): `BV2_13.04` (kern) · `BV2_02.05` (ondersteunend) · `BV2_06.19` (contextueel). De pre-push hook

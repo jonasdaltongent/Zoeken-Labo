@@ -144,6 +144,92 @@ def werkdocument():
     doc.save(UIT)
 
 
+# ---- De verbetersleutel: hetzelfde werkdocument, elk lichtblauw vak ingevuld met het verwachte antwoord
+# (Jonas, 26-11-2026: "de verbetersleutel (het ingevulde document) ook linken op de lessenpagina").
+# Uit lesvoorbereiding § 14 en § 22 (en README § 4). Het bestand komt in werkdocument/sleutel/ (niet op GitHub:
+# .gitignore) en gaat met _tools/zet_sleutel_klaar.py als privé Google-document naar Jonas' Drive.
+SLEUTEL = os.path.join(HERE, "sleutel", "Zoekverslag-onderzoekslabo - verbetersleutel.docx")
+TELT_NIET = "  Telt niet: "
+ANTWOORDEN = [
+    # Deel 1, vraag 1 (2 punten: 0,5 per vak)
+    "slapen (of: slaap; ook goed: 's avonds)",
+    "nachtrust (ook: slaaptekort, slaapkwaliteit, sleep)",
+    "jongeren",
+    "tieners (ook: adolescenten, pubers, teenagers)",
+    # Deel 1, vraag 2 (1 punt)
+    "Zo vind je ook pagina's die het andere woord gebruiken (smartphone in plaats van gsm)."
+    + TELT_NIET + "'omdat het hetzelfde is' zonder te zeggen wat je dan meer vindt.",
+    # Deel 2, vraag 1: A (aantal), B, aantal, C, aantal (aantallen 1 punt samen; B 2; C 3)
+    "bv. 1",
+    "slapen jongeren gsm OR smartphone   (alleen trefwoorden: 1 · OR in hoofdletters tussen twee synoniemen: 1)",
+    "bv. 3",
+    'slapen jongeren gsm OR smartphone "blauw licht" -kopen   (woordgroep tussen aanhalingstekens: 1 · minteken vlak '
+    "voor het woord, zonder spatie: 1 · de trefwoorden van B: 1)",
+    "bv. 4",
+    # Deel 2, vraag 2 (2 punten)
+    "Ik wilde de webshops kwijt die gsm's verkopen (1). Bij C waren ze weg (1)."
+    + TELT_NIET + "een woord uitsluiten zonder te zeggen welk resultaat van B weg moest.",
+    # Deel 3, vraag 1 (1 punt)
+    "Elke periode (de datum)",
+    "Afgelopen jaar (elke periode is goed)",
+    # Deel 3, vraag 2 (1 punt)
+    'slapen jongeren gsm OR smartphone "blauw licht" -kopen   (B of C; het filter zie je niet in wat je typt)',
+    # Deel 3, vraag 3 (4 punten: per resultaat titel 0,5, volledig webadres 1, over slaap én schermen 0,5)
+    "de titel van een pagina over slaap en schermen (bv. van een krant, een gezondheidssite of een universiteit)",
+    "https://… (het volledige adres uit de adresbalk; niet google.com/search?…, niet het AI-overzicht, geen advertentie)",
+    "een tweede titel over slaap en schermen",
+    "https://… (zoals hierboven)",
+    # Deel 3, vraag 4 (2 punten)
+    "A zocht op alle woorden van de zin, ook als, ze en hun, en gaf vooral forums en vragen van mensen (1). D zoekt op "
+    "trefwoorden met een synoniem, sluit webshops uit en toont alleen pagina's van het afgelopen jaar: bij D gingen 4 "
+    "van de 5 over de vraag, bij A maar 1 (1: iets wat de leerling zelf zag)."
+    + TELT_NIET + "'omdat het beter is', of een algemene zin over Google zonder iets uit de eigen resultaten.",
+    # Deel 4: codewoord (−2 als het leeg of fout is; een tikfout telt als juist)
+    "TREFWOORD",
+    # Deel 4: controletabel, kolom Klopt?
+    *["x"] * 10,
+    # Deel 4: exitvraag (1 punt)
+    "stress examens jongeren OR tieners   (ook: stress OR spanning examens jongeren)"
+    + TELT_NIET + "een zin; or in kleine letters.",
+    # Extra (telt niet mee)
+    "sleep teenagers phone OR smartphone",
+    "een getal van 0 tot 5, en meer of minder dan bij D",
+]
+
+
+def sleutel():
+    """Vult elk lichtblauw vak (HEX_VAK) van het werkdocument, in volgorde, met het verwachte antwoord."""
+    from docx import Document
+    from docx.oxml.ns import qn
+    from docx.shared import RGBColor
+    doc = Document(UIT)
+    vakken = [c for c in doc.element.body.iter(qn("w:tc"))
+              if any(shd.get(qn("w:fill"), "").upper() == hs.HEX_VAK for shd in c.iter(qn("w:shd")))]
+    if len(vakken) != len(ANTWOORDEN):
+        raise SystemExit(f"{len(vakken)} vakken, maar {len(ANTWOORDEN)} antwoorden: pas ANTWOORDEN aan.")
+    from docx.table import _Cell
+    groen = RGBColor(0x1B, 0x6E, 0x2F)
+    for tc, antwoord in zip(vakken, ANTWOORDEN):
+        cel = _Cell(tc, None)
+        p = cel.paragraphs[0]
+        hoofd, _, niet = antwoord.partition(TELT_NIET)
+        r = p.add_run(hoofd)
+        hs.stijl(r, grootte=10, vet=True, kleur=groen)
+        if niet:
+            r = p.add_run("  Telt niet: " + niet)
+            hs.stijl(r, grootte=9, cursief=True, kleur=hs.GRIJS)
+    # bovenaan, vóór alles: een duidelijke titel
+    eerste = doc.paragraphs[0]
+    titel = eerste.insert_paragraph_before()
+    r = titel.add_run("VERBETERSLEUTEL — alleen voor de leraar, niet delen met leerlingen")
+    hs.stijl(r, grootte=12, vet=True, kleur=RGBColor(0xB0, 0x1E, 0x1E))
+    doc.core_properties.title = "Zoekverslag onderzoekslabo - verbetersleutel"
+    os.makedirs(os.path.dirname(SLEUTEL), exist_ok=True)
+    doc.save(SLEUTEL)
+
+
 if __name__ == "__main__":
     werkdocument()
     print("Gemaakt: Zoekverslag-onderzoekslabo.docx")
+    sleutel()
+    print("Gemaakt: sleutel/Zoekverslag-onderzoekslabo - verbetersleutel.docx (niet op GitHub)")
